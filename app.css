@@ -11,22 +11,48 @@ body{
     background-image:linear-gradient(#021018,#202C33,#374249);         
 }
 
-
-
-main {
-
+a, p, h1, h2, h3, h4 {
+    font-family: 'Goldman';
 }
 
 ul {
-text-decoration: none;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
 }
 
 li {
+list-style: none;
 text-decoration: none;    
 }
 
-a, p, h1, h2, h3, h4 {
-    font-family: 'Goldman';
+header {
+    height: 10vh;
+    width: 100%;
+    background-color: black;
+}
+
+header nav {
+    background-color: gray;
+    height: 100%;
+    width: 100%;
+}
+
+header > nav > ul {
+    display: none;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > nav > ul > li > ul {
+    display: none;
+}
+
+header > nav > ul > li:hover > ul {
+    display: block;
 }
 
 .row {
@@ -40,7 +66,7 @@ a, p, h1, h2, h3, h4 {
 
 header > nav > ul > li:nth-child(1) {
     width: 100px;
-    height: 100px;
+    height: 80%;
 }
 
 .navlogo  {
@@ -48,7 +74,6 @@ header > nav > ul > li:nth-child(1) {
     background-image: url("pics/trion-logo.png");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 100%;
     height: 100%;
 }
 
