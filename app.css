@@ -1,11 +1,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
 
+:root {
+    --metal-red: linear-gradient(to right, #310202, #6A0F0F, #310202);
+    --metal-red-hover: linear-gradient(to right, #310202, #6A0F0F 20%, #310202);
+    --metal-grey: linear-gradient(#3C3C3C, #FFFFFF, #3C3C3C)
+}
+
 * {
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     background-image:linear-gradient(#021018,#202C33,#374249);         
@@ -13,6 +19,27 @@ body{
 
 a, p, h1, h2, h3, h4 {
     font-family: 'Goldman';
+    margin: 0;
+    color: white;
+}
+
+h2 {
+    background-image: var(--metal-grey);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* -webkit-text-stroke: 1px white;
+    paint-order: stroke fill; */
+}
+
+
+a {
+    cursor: pointer;
+}
+
+
+a:-webkit-any-link {
+    color: white;
+    text-decoration: none;
 }
 
 ul {
@@ -23,36 +50,9 @@ ul {
 }
 
 li {
-list-style: none;
-text-decoration: none;    
-}
-
-header {
-    height: 10vh;
-    width: 100%;
-    background-color: black;
-}
-
-header nav {
-    background-color: gray;
-    height: 100%;
-    width: 100%;
-}
-
-header > nav > ul {
-    display: none;
-    height: 100%;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header > nav > ul > li > ul {
-    display: none;
-}
-
-header > nav > ul > li:hover > ul {
-    display: block;
+    list-style: none;
+    text-decoration: none;
+    color: white;
 }
 
 .row {
@@ -60,35 +60,218 @@ header > nav > ul > li:hover > ul {
     flex-direction: row;
 }
 
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
 .wrap {
     flex-wrap: wrap;
 }
 
-header > nav > ul > li:nth-child(1) {
-    width: 100px;
-    height: 80%;
+.hidden {
+    display: none;
 }
 
-.navlogo  {
+.button {
+    position: relative;
+    padding: 1em 2em;
+    border: solid 1px white;
+    border-radius: 10px;
+    background-image: var(--metal-red);
+    transition: all 300ms ease;
+}
+
+.button:hover {
+    background: var(--metal-red-hover);
+}
+
+.img {
     display: block;
-    background-image: url("pics/trion-logo.png");
     background-repeat: no-repeat;
     background-size: contain;
+    max-width: 100%;
+    background-position: center;
+}
+
+.parallax {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+header {
+    height: 5rem;
+    width: 100%;
+    position: absolute;
+}
+
+header li > a {
+    text-shadow: black 0 4px 4px;
+    transition: color 300ms ease;
+}
+
+header li:hover:not(:focus-within) > a {
+    color: #ff0000;
+}
+
+header > nav {
+    /* border: solid 1px white; */
     height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1em;
+    color: white;
+}
+
+@media screen and (min-width: 1024px) {
+    header > nav {
+        font-size: 2vw;
+    }
+
+    header .img {
+        width: 5vw;
+    }
+}
+
+header > nav > div {
+    margin-left: auto;
+}
+
+header > nav > div > a {
+    margin: 0 1rem 0 1rem;
+}
+
+.login-overlay {
+    background-color: black;
+    position: absolute;
+    right: 0;
+    top: 5rem;
+}
+
+header > nav > ul {
+    display: none;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > nav > ul > li {
+    margin: 0 1em 0 1em;
+    width: fit-content;
+}
+
+header .dropdown {
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
+
+header li:hover .dropdown {
+    visibility: visible;
+    opacity: 1;
+}
+
+.navlogo {
+    display: block;
+    background-image: url("pics/trion-logo.png");
+    height: 90%;
+    width: 50px;
+    margin: 0 1rem;
 }
 
 .navcart {
-    background-image: url();
-    width: 45px;
-    height: 45px;
+    background-image: url("pics/cart-empty-white.svg");
+    width: 50px;
+    height: auto;
 }
 
 .navaccount {
-    background-image: url();
-    width: 54px;
-    height: 54px;
+    background-image: url("pics/account-icon-white.svg");
+    width: 50px;
+    height: 50px;
+}
+
+#hero {
+    height: 90vh;
+    background-image: url("pics/car-orange-cloudy.png");
+    z-index: -1;
+}
+
+#to-top{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: #6d6d6d;
+   height: 35px;
+}
+
+footer {
+    background-color: #141414;
+}
+
+#footer-main {
+    margin-top: 2rem;
+    justify-content: space-between;
+}
+
+#footer-contact{
+   
+}
+
+.footer-foot {
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-foot ul li, .footer-foot p {
+    margin: 0 1em;
+}
+
+.footer-nav {
+    flex-direction: column;
+    margin-left: 1rem;
+}
+
+.footer-nav ul li {
+    margin-bottom: 1em;
+}
+
+.footer-nav ul li a {
+    color: #A5A5A5;
+}
+
+#connections {
+    width: 50%;
+    justify-content: space-between;
+    margin: auto;
+}
+
+#connections a {
+    width: calc(100% / 7);
+    position: relative;
+    padding: 0 1rem;
+}
+
+#connections a img {
+    width: 100%;
+    bottom: 0;
+}
+
+#footer-contact {
+    width: 60%;
+}
+
+footer hr {
+    border-color: #282828;
 }
 
 label, input {
     display: block;
+    color: white;
 }

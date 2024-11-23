@@ -6,20 +6,19 @@
         <title>Document</title>
     </head>
     <body>
-        <div class="page-wrapper">
-            <header>
-                <nav class="row">
+        <header>
+            <nav class="row">
+                <a class="navlogo img" href="index.html" aria-label="company logo"></a>
                 <ul class="row">
-                    <li><a class="navlogo" href="index.html" aria-label="company logo"></a></li>
                     <li>
-                        <a href="models.html"aria-haspopup="true">MODELS</a>
+                        <a aria-haspopup="true">MODELS</a>
                         <ul class="dropdown" aria-label="submenu">
                             <li><a href="#">Nemesis</a></li>
                             <li><a href="#">Black Widow</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="about-us.html"aria-haspopup="true">ABOUT US</a>
+                        <a aria-haspopup="true">ABOUT US</a>
                         <ul class="dropdown" aria-label="submenu">
                             <li><a href="#">Our Story</a></li>
                             <li><a href="#">Press</a></li>
@@ -27,65 +26,95 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="customize.html"aria-haspopup="true">CUSTOMIZE</a>
+                        <a aria-haspopup="true">CUSTOMIZE</a>
                         <ul class="dropdown" aria-label="submenu">
                             <li><a href="#">Nemesis</a></li>
                             <li><a href="#">Black Widow</a></li>
                         </ul> 
                     </li>
-                    <li><a href="shop.html"aria-haspopup="true">SHOP</a></li>
-                    <li><a class="navcart" href="#" title=cart></a></li>
-                    <li><a class="navaccount" href="#" title=account></a></li>
-                </ul>    
-                </nav>
-            </header>
-            <main>
+                    <li><a href="#"aria-haspopup="true">SHOP</a></li>
+                </ul>
+                <div class="row">
+                    <a class="navcart img" href="#" title="cart"></a>
+                    <div class="cart-overlay hidden">
+                        
+                    </div>
+                    <a class="navaccount img" href="#" title="account"></a>
+                    <div class="login-overlay col hidden">
+                        <a href="" class="button">REGISTER</a>
+                        <a href="" class="button">LOGIN</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section id="hero" class="parallax">
+            <article>
 
-            </main>
-            <footer>
-                <div>
-                    <a id="to-top" href="#">BACK TO TOP</a>
+            </article>
+        </section>
+        <main>
+
+        </main>
+        <footer>
+            <div>
+                <li><a id="to-top" href="#">BACK TO TOP</a></li>
+            </div>
+            <div id="footer-main" class="row wrap">
+                <nav class="footer-nav">
+                    <ul class="col">
+                        <li><a href="#">ACCOUNT</a></li>
+                        <li><a href="#">MODELS</a></li>
+                        <li><a href="#">CUSTOMIZATION</a></li>
+                        <li><a href="#">ABOUT US</a></li>
+                        <li><a href="#">PRESS</a></li>
+                        <li><a href="#">CONTACT US</a></li>
+                        <li><a href="#">STORE</a></li>
+                    </ul>
+                </nav>
+                <section id="footer-contact">
+                    <h2>CONTACT US</h2>
+                    <form class="row wrap">
+                        <div>
+                            <label for="f-name">FIRST NAME</label>
+                            <input type="text" id="f-name" placeholder="FIRST NAME">
+                        </div>
+                        <div>
+                            <label for="l-name">LAST NAME</label>
+                            <input type="text" id="l-name" placeholder="LAST NAME">
+                        </div>
+                        <div>
+                            <label for="email">EMAIL</label>
+                            <input type="text" id="email" placeholder="EMAIL">
+                        </div>
+                        <div>
+                            <label for="phone">PHONE</label>
+                            <input type="text" id="phone" placeholder="PHONE">
+                        </div>
+                        <div>
+                            <label for="message">MESSAGE</label>
+                            <textarea id="message" placeholder="MESSAGE"></textarea>
+                        </div>
+                        <button type="submit">SUBMIT</button>
+                    </form>
+                </section>
+                <ul id="connections" class="row">
+                    <a href=""><img src="pics/facebook-icon.svg" alt=""></a>
+                    <a href=""><img src="pics/instagram-icon.svg" alt=""></a>
+                    <a href=""><img src="pics/linkedin-icon.svg" alt=""></a>
+                    <a href=""><img src="pics/youtube-icon.svg" alt=""></a>
+                    <a href=""><img src="pics/tiktok-icon.svg" alt=""></a>
+                    <a href=""><img src="pics/x-icon.svg" alt=""></a>
+                    <a href=""><img src="pics/twitch-icon.svg" alt=""></a>
+                </ul>
+            </div>
+            <hr>
+                <div class="col footer-foot">
+                    <ul class="row">
+                        <li><a href="">Privacy</a></li>
+                        <li><a href="">Terms</a></li>
+                    </ul>
+                    <p>© 2024-2025, Trion Supercars</p>
                 </div>
-                <div>
-                    <nav>
-                        <ul>
-                            <li><a href="#">ACCOUNT</a></li>
-                            <li><a href="#">MODELS</a></li>
-                            <li><a href="#">CUSTOMIZATION</a></li>
-                            <li><a href="#">ABOUT US</a></li>
-                            <li><a href="#">PRESS</a></li>
-                            <li><a href="#">CONTACT US</a></li>
-                            <li><a href="#">STORE</a></li>
-                        </ul>
-                    </nav>
-                    <section id="footer-contact">
-                        <h2>CONTACT US</h2>
-                        <form class="row wrap">
-                            <div>
-                                <label for="f-name">FIRST NAME</label>
-                                <input type="text" id="f-name" placeholder="FIRST NAME">
-                            </div>
-                            <div>
-                                <label for="l-name">LAST NAME</label>
-                                <input type="text" id="l-name" placeholder="LAST NAME">
-                            </div>
-                            <div>
-                                <label for="email">EMAIL</label>
-                                <input type="text" id="email" placeholder="EMAIL">
-                            </div>
-                            <div>
-                                <label for="phone">PHONE</label>
-                                <input type="text" id="phone" placeholder="PHONE">
-                            </div>
-                            <div>
-                                <label for="message">MESSAGE</label>
-                                <textarea id="message" placeholder="MESSAGE"></textarea>
-                            </div>
-                            <button type="submit">SUBMIT</button>
-                        </form>
-                    </section>
-                </div>
-            </footer>
-        </div> 
+        </footer>
     </body>
 </html>
