@@ -4,7 +4,8 @@
 :root {
     --metal-red: linear-gradient(to right, #310202, #6A0F0F, #310202);
     --metal-red-hover: linear-gradient(to right, #310202, #6A0F0F 20%, #310202);
-    --metal-grey: linear-gradient(#3C3C3C, #FFFFFF, #3C3C3C)
+    --metal-grey: linear-gradient(#3C3C3C, #FFFFFF, #3C3C3C);
+    --metal-grey-light: linear-gradient(to right, #D9D9D9, #B9B9B9)
 }
 
 * {
@@ -17,7 +18,7 @@ body {
     background-image:linear-gradient(#021018,#202C33,#374249);         
 }
 
-a, p, h1, h2, h3, h4 {
+a, p, label, h1, h2, h3, h4 {
     font-family: 'Goldman';
     margin: 0;
     color: white;
@@ -27,12 +28,10 @@ h2 {
     background-image: var(--metal-grey);
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    /* -webkit-text-stroke: 1px white;
-    paint-order: stroke fill; */
 }
 
 
-a {
+button {
     cursor: pointer;
 }
 
@@ -73,12 +72,21 @@ li {
     display: none;
 }
 
+.no-button {
+    color: white;
+    background: none;
+    border: none;
+    font-family: 'Goldman';
+}
+
 .button {
     position: relative;
     padding: 1em 2em;
     border: solid 1px white;
     border-radius: 10px;
     background-image: var(--metal-red);
+    color: white;
+    font-family: 'Goldman';
     transition: all 300ms ease;
 }
 
@@ -107,9 +115,10 @@ header {
     position: absolute;
 }
 
-header li > a {
+header li > a, header li > button {
     text-shadow: black 0 4px 4px;
     transition: color 300ms ease;
+    display: block;
 }
 
 header li:hover:not(:focus-within) > a {
@@ -128,7 +137,8 @@ header > nav {
 }
 
 @media screen and (min-width: 1024px) {
-    header > nav {
+    header > nav,
+    header button.no-button {
         font-size: 2vw;
     }
 
@@ -153,7 +163,6 @@ header > nav > div > a {
 }
 
 header > nav > ul {
-    display: none;
     height: 100%;
     justify-content: space-between;
     align-items: center;
@@ -172,9 +181,12 @@ header .dropdown {
     transition: opacity 300ms ease;
 }
 
-header li:hover .dropdown {
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover {
     visibility: visible;
     opacity: 1;
+    display: block;
 }
 
 .navlogo {
@@ -220,22 +232,48 @@ footer {
     justify-content: space-between;
 }
 
-#footer-contact{
-   
+#footer-contact {
+    padding: 0 5%;
+    width: 70%;
 }
 
-.footer-foot {
+#footer-contact form {
+    justify-content: space-between;
+}
+
+#footer-contact form > div:not(:last-of-type) {
+   width: calc(94% / 2);
+   margin: 10px 0;
+}
+
+#footer-contact form div:last-of-type {
+    width: 100%;
+    margin: 10px 0;
+}
+
+#footer-foot {
     align-items: center;
     justify-content: center;
 }
 
-.footer-foot ul li, .footer-foot p {
+#footer-foot ul li, #footer-foot p {
     margin: 0 1em;
+    padding: 5px 0;
+}
+
+#footer-foot ul li a, #footer-foot p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
+}
+
+[type=submit] {
+    margin-top: 1rem;
 }
 
 .footer-nav {
     flex-direction: column;
     margin-left: 1rem;
+    padding-right: 2rem;
 }
 
 .footer-nav ul li {
@@ -244,16 +282,24 @@ footer {
 
 .footer-nav ul li a {
     color: #A5A5A5;
+    transition: color 300ms ease;
+}
+
+.footer-nav ul li a:hover {
+    color: #ffffff;
 }
 
 #connections {
-    width: 50%;
+    width: 350px;
     justify-content: space-between;
     margin: auto;
+    max-width: 350px;
+    margin-top: 2rem;
 }
 
 #connections a {
     width: calc(100% / 7);
+    max-width: 50px;
     position: relative;
     padding: 0 1rem;
 }
@@ -263,15 +309,36 @@ footer {
     bottom: 0;
 }
 
-#footer-contact {
-    width: 60%;
-}
-
 footer hr {
     border-color: #282828;
 }
 
-label, input {
+label {
     display: block;
     color: white;
+}
+
+input, textarea {
+    background-image: var(--metal-grey-light);
+    border: none;
+    border-radius: 2px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px inset;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea::placeholder {
+    justify-items:center ;
+}
+
+input {
+    height: 3em;
+}
+
+textarea {
+    height: 5em;
+    resize: vertical;
+    max-height: 30rem;
+    min-height: 1em;
+    width: 100%;
 }
