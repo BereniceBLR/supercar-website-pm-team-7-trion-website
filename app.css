@@ -4,8 +4,9 @@
 :root {
     --metal-red: linear-gradient(to right, #310202 0% 25%, #6A0F0F 50%, #310202 75% 100%);
     --metal-grey: linear-gradient(#3C3C3C, #FFFFFF, #3C3C3C);
-    --metal-grey-light: linear-gradient(to right, #D9D9D9, #B9B9B9)
 }
+
+/*-------Elements-------*/
 
 * {
     box-sizing: border-box;
@@ -35,7 +36,7 @@ label {
 }
 
 input, textarea {
-    background-image: var(--metal-grey-light);
+    /* background-image: var(--metal-grey-light); */
     border: none;
     border-radius: 2px;
     width: 100%;
@@ -71,6 +72,10 @@ a:-webkit-any-link {
     text-decoration: none;
 }
 
+a {
+    cursor: pointer;
+}
+
 ul {
     list-style: none;
     text-decoration: none;
@@ -83,6 +88,10 @@ li {
     text-decoration: none;
     color: white;
 }
+
+/*---------------------*/
+
+/*-------Classes-------*/
 
 .row {
     display: flex;
@@ -141,11 +150,23 @@ li {
     background-position: center;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
+/*------------------------*/
+
+/*-------Header/Nav-------*/
+
 header {
     height: 5rem;
     width: 100%;
     position: absolute;
     margin-top: 1rem;
+}
+
+#menu-burger {
+    display: none;
 }
 
 header li > a, header li > button {
@@ -159,7 +180,6 @@ header li:hover:not(:focus-within) > a {
 }
 
 header > nav {
-    /* border: solid 1px white; */
     height: 100%;
     width: 100%;
     display: flex;
@@ -231,13 +251,18 @@ ul li ul:hover {
     height: 50px;
 }
 
+/*--------------*/
+
+
 #hero {
     height: 90vh;
     background-image: url("pics/car-orange-cloudy.png");
     z-index: -1;
 }
 
-#to-top{
+
+/*-------Footer-------*/
+#to-top {
    display: flex;
    align-items: center;
    justify-content: center;
@@ -334,7 +359,9 @@ footer {
 footer hr {
     border-color: #282828;
 }
+/*--------------*/
 
+/*-------Mobile/Tablet-------*/
 @media screen and (min-width: 1024px) {
     header > nav,
     header button.no-button {
@@ -348,4 +375,28 @@ footer hr {
 
 @media screen and (max-width: 768px) {
     
+    #menu-burger {
+        display: block;
+        background-image: url("pics/burger.svg");
+        height: 50px;
+        width: 50px;
+        margin: 0 1rem;
+        cursor: pointer;
+    }
+
+    #nav-list, .navlogo {
+        display: none;
+    }
+
+    #burger-cb:checked + ul {
+        display: block;
+    }
+    
+    #hero {
+        height: 70vh;
+        background-size: cover;
+        background-position: top;
+        max-height: 1000px;
+    }
+
 }
