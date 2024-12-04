@@ -161,6 +161,31 @@ li {
     visibility: hidden;
 }
 
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 81px;
+    max-width: 1300px;
+    padding: 20px;
+}
+  .card-container {
+    max-width: 5%;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  .card{
+    background-color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px;
+  }
+  .card img{
+    background-image: url(pics/no-photo.jpg);
+    width: 406px;
+    height: 406px; 
+  }
+  
 /*------------------------*/
 
 /*-------Header/Nav-------*/
@@ -192,7 +217,7 @@ header li > a, header li > button {
 
 header li:hover:not(:focus-within) > a,
 header li:focus-within > a {
-    color: #ff0000;
+    color: #670E0E;
 }
 
 header > nav {
@@ -277,7 +302,11 @@ ul li ul:hover {
     z-index: -1;
 }
 
-
+#hero-press {
+    height: 90vh;
+    background-image: url("pics/front.png");
+    z-index: -1;  
+}
 /*-------Footer-------*/
 #to-top {
    display: flex;
