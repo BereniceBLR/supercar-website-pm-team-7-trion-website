@@ -3,7 +3,7 @@
 
 :root {
     --metal-red: linear-gradient(to right, #310202 0% 25%, #6A0F0F 50%, #310202 75% 100%);
-    --metal-grey: linear-gradient(#3C3C3C, #FFFFFF, #3C3C3C);
+    --metal-grey: linear-gradient(#000000, #FFFFFF, #000000);
     --focus-color: cornflowerblue;
 }
 
@@ -30,7 +30,7 @@ a, p, label, h1, h2, h3, h4 {
     outline: none;
 }
 
-h2 {
+h1, h2 {
     background-image: var(--metal-grey);
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -109,6 +109,34 @@ li {
     flex-direction: column;
 }
 
+.full {
+    width: 100%;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
 .wrap {
     flex-wrap: wrap;
 }
@@ -176,7 +204,7 @@ header button.no-button {
     font-size: calc(1rem + .5vw);
 }
 
-header .img {
+header #navlogo {
     width: 5vw;
 }
 
@@ -272,9 +300,26 @@ ul li ul:hover {
 
 
 #hero {
+    display: flex;
     height: 90vh;
     background-image: url("pics/car-orange-cloudy.png");
     z-index: -1;
+    justify-content: center;
+    padding-bottom: 5rem;
+}
+
+#hero article h1 {
+    font-size: calc(2rem + 2vw);
+    margin-bottom: 0
+}
+
+#hero article p {
+    font-size: calc(1rem + .4vw);
+}
+
+#hero article a {
+    font-size: calc(1rem + .5vw);
+    margin-top: 2rem;
 }
 
 
@@ -542,7 +587,8 @@ footer hr {
 
 @keyframes menu-close {
     0% {transform: translate(0%);}
-    100% {transform: translate(-100%);}
+    99% {display: flex;}
+    100% {transform: translate(-100%); display: none;}
 }
 
 @keyframes dropdown-open {
