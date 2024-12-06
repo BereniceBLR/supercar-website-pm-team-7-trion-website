@@ -196,23 +196,32 @@ li {
     padding: 20px;
 }
 .card-container {
-max-width: 5%;
-margin: 50px auto;
-display: flex;
-flex-wrap: wrap;
-gap: 25px;
+    max-width: 5%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 2rem;
 }
 
 .card{
-background-color: #000000;
-border-radius: 10px;
-box-shadow: 0 0 10px;
+    background-color: #c4c4c4;
+    box-shadow: 0 0 10px;
 }
 
 .card img{
-background-image: url(pics/no-photo.jpg);
-width: 406px;
-height: 406px; 
+    background-image: url(pics/no-photo.jpg);
+    width: 406px;
+    height: 406px; 
+}
+
+.about-icon{
+    display: flex;
+    width: 763px;
+    height: 879px;
+    transform: translate(10rem);
 }
 
 .carousel-container {
