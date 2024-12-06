@@ -160,6 +160,7 @@ li {
     background-position: 50% 0;
     color: white;
     font-family: 'Goldman';
+    cursor: pointer;
     transition: all 200ms ease-out;
 }
 
@@ -214,9 +215,34 @@ width: 406px;
 height: 406px; 
 }
 
+.carousel-container {
+    animation: 1s infinite ease-in-out carousel-transition;
+    animation-delay: .9s;
+}
+
 .carousel-tabs {
     display: flex;
     justify-content: space-between;
+}
+
+.carousel_2 {
+    animation: 2s infinite ease-in-out carousel-2;
+}
+
+div[class*=carousel_] {
+    position: relative;
+}
+
+div[class*=carousel_]:nth-of-type(1) {
+    animation-delay: 0s;
+}
+
+div[class*=carousel_]:nth-of-type(2) {
+    animation-delay: 1s;
+}
+
+div[class*=carousel_]:nth-of-type(3) {
+    animation-delay: 2s;
 }
   
 /*------------------------*/
@@ -228,19 +254,21 @@ header {
     width: 100%;
     position: absolute;
     margin-top: 1rem;
+    z-index: 1;
 }
 
 .navlogo h1 {
     position: fixed;
-    text-indent: 9999px;
+    top: -9999px
 }
 
 header button.no-button {
     font-size: calc(1rem + .5vw);
 }
 
-header #navlogo {
+header .navlogo {
     width: 5vw;
+    position: relative;
 }
 
 #menu-burger, #burger-cb {
@@ -343,12 +371,8 @@ section[role=hero] {
     height: 90vh;
     width: 100vw;
     min-width: 100vw;
-    z-index: -2;
     justify-content: center;
     padding-bottom: 5rem;
-    animation: 1s infinite ease-in-out, 1s infinite ease-in-out;
-    animation-name: carousel-2-2, carousel-2-1;
-    animation-delay: 1s, 2s;
 }
 
 .hero article {
@@ -598,7 +622,6 @@ footer hr {
 
     #nav-list > li > ul > li > a:-webkit-any-link {
         transform: translateX(2rem);
-        /* color: rgb(199, 199, 199) */
     }
 
     #nav-list button:after {
@@ -702,22 +725,26 @@ footer hr {
     100% {display: none;}
 }
 
-@keyframes carousel-2-1 {
-    0% {
-        transform: translateX(0%);
+@keyframes carousel-2 {
+    0%, 49.9% {
+        order: 0;
     }
 
-    100% {
-        transform: translateX(-100%);
+    50%, 100% {
+        order: 1;
     }
 }
 
-@keyframes carousel-2-2 {
+@keyframes carousel-transition {
     0% {
-        transform: translateX(100%);
+        filter: brightness(100%);
     }
 
-    100% {
-        transform: translateX(0%);
+    10% {
+        filter: brightness(0%);
+    }
+
+    20%, 100% {
+        filter: brightness(100%);
     }
 }
