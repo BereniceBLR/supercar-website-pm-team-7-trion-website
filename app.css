@@ -225,6 +225,16 @@ section.full {
     height: 406px; 
 }
 
+.intro-richard{
+    background-color: #313B40;
+    font-size: 24px;
+    width: 577px;
+    height: auto;
+    padding: 10px;
+    margin: 20px;
+    transform: translate(rem);
+}
+
 .about-icon{
     display: flex;
     width: 763px;
