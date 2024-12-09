@@ -25,6 +25,10 @@ a, p, label, h1, h2, h3, h4 {
     color: white;
 }
 
+p {
+
+}
+
 :focus-visible {
     box-shadow: 0 0 5px 3px var(--focus-color);
     outline: none;
@@ -109,6 +113,10 @@ li {
 
 .full {
     width: 100%;
+}
+
+section.full {
+
 }
 
 .justify-start {
@@ -213,7 +221,7 @@ li {
 }
 
 .card img{
-    background-image: url(pics/no-photo.jpg);
+    background-image: url("pics/no-photo.jpg");
     width: 406px;
     height: 406px; 
 }
@@ -357,20 +365,20 @@ ul li ul:hover {
 
 .navlogo {
     display: block;
-    background-image: url("pics/trion-logo.png");
+    background-image: url("pics/icons/trion-logo.png");
     height: 90%;
     width: 50px;
     margin: 0 1rem;
 }
 
 .navcart {
-    background-image: url("pics/cart-empty-white.svg");
+    background-image: url("pics/icons/cart-empty-white.svg");
     width: 50px;
     height: auto;
 }
 
 .navaccount {
-    background-image: url("pics/account-icon-white.svg");
+    background-image: url("pics/icons/account-icon-white.svg");
     width: 50px;
     height: 50px;
 }
@@ -425,13 +433,13 @@ section[role=hero] {
 
 #hero-press {
     height: 90vh;
-    background-image: url("pics/front.png");
+    background-image: url("pics/cars/front.png");
     z-index: -1;  
 }
 
 #hero-our-story {
     height: 90vh;
-    background-image: url("pics/KS_config_hanger.jpg");
+    background-image: url("pics/cars/KS_config_hanger.jpg");
     z-index: -1;  
 }
 
@@ -461,6 +469,11 @@ footer {
 #footer-contact {
     padding: 0 5%;
     width: 70%;
+}
+
+#footer-contact h3 {
+    font-size: 2em;
+    text-align: center;
 }
 
 #footer-contact form {
@@ -551,10 +564,10 @@ footer hr {
 /*-------Ids-------*/
 
 #home .hero:nth-of-type(1) {
-    background-image: url("pics/car-orange-cloudy.png");
+    background-image: url("pics/cars/car-orange-cloudy.png");
 }
 #home .hero:nth-of-type(2) {
-    background-image: url("pics/car-black-blue-bg.jpg");
+    background-image: url("pics/cars/car-black-blue-bg.jpg");
 }
 
 /*-----------------*/
@@ -589,7 +602,7 @@ footer hr {
 
     #menu-burger {
         display: block;
-        background-image: url("pics/burger.svg");
+        background-image: url("pics/icons/burger.svg");
         height: 50px;
         width: 50px;
         margin: 0 1rem;
@@ -672,16 +685,16 @@ footer hr {
     0% {opacity: 1;}
     30% {
         opacity: 0;
-        background-image: url("pics/burger.svg");
+        background-image: url("pics/icons/burger.svg");
         transform: rotate(0deg);
     }
     31% {
-        background-image: url("pics/close-white.svg");
+        background-image: url("pics/icons/close-white.svg");
         transform: rotate(180deg);
     }
     100% {
         opacity: 1;
-        background-image: url("pics/close-white.svg");
+        background-image: url("pics/icons/close-white.svg");
         transform: rotate(0deg);
     }
 }
@@ -690,16 +703,16 @@ footer hr {
     0% {opacity: 1;}
     30% {
         opacity: 0;
-        background-image: url("pics/close-white.svg");
+        background-image: url("pics/icons/close-white.svg");
         transform: rotate(0deg);
     }
     31% {
-        background-image: url("pics/close-white.svg");
+        background-image: url("pics/icons/close-white.svg");
         transform: rotate(-180deg);
     }
     100% {
         opacity: 1;
-        background-image: url("pics/burger.svg");
+        background-image: url("pics/icons/burger.svg");
         transform: rotate(0deg);
     }
 }
