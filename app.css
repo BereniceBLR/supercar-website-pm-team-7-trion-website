@@ -209,6 +209,7 @@ li {
 .card{
     background-color: #c4c4c4;
     box-shadow: 0 0 10px;
+    font-size: 24px;
 }
 
 .card img{
@@ -224,14 +225,14 @@ li {
     height: auto;
     padding: 10px;
     margin: 20px;
-    transform: translate(rem);
+    transform: translate(80rem);
 }
 
 .about-icon{
     display: flex;
     width: 763px;
     height: 879px;
-    transform: translate(10rem);
+    transform: translateY(-59rem);
 }
 
 .carousel-container {
