@@ -40,6 +40,10 @@ h2, h3 {
     background-clip: text;
 }
 
+h3 {
+    font-size: 2em;
+}
+
 label {
     display: block;
     color: white;
@@ -116,7 +120,19 @@ li {
 }
 
 section.full {
-    min-height: 20rem;
+    min-height: 40rem;
+    justify-content: end;
+    padding: 1rem;
+}
+
+section.full.img {
+    background-size: cover;
+}
+
+section.full .text-wrapper {
+    height: fit-content;
+    width: 50%;
+    display: block;
 }
 
 .justify-start {
@@ -178,7 +194,6 @@ section.full {
 }
 
 .img {
-    display: block;
     background-repeat: no-repeat;
     background-size: contain;
     max-width: 100%;
@@ -214,7 +229,7 @@ section.full {
     padding: 2rem;
 }
 
-.card{
+.card {
     background-color: #c4c4c4;
     box-shadow: 0 0 10px;
     font-size: 24px;
@@ -387,6 +402,10 @@ section[role=hero] {
     overflow-x: hidden;
 }
 
+#home main section:nth-of-type(1) {
+    background-image: url("pics/cars/Nemesis_blk_corrug-1024x633.png");
+}
+
 /*--------------*/
 
 
@@ -409,8 +428,9 @@ section[role=hero] {
     margin-bottom: 0;
     position: relative;
 }
+     
 
-.hero article h2:before {
+.shaded:before {
     position: absolute;
     content: "";
     left: 5%;
@@ -472,7 +492,6 @@ footer {
 }
 
 #footer-contact h3 {
-    font-size: 2em;
     text-align: center;
 }
 
