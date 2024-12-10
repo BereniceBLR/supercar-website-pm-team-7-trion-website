@@ -255,7 +255,20 @@ section.full .text-wrapper {
     display: flex;
     width: 763px;
     height: 879px;
-    transform: translateY(-59rem);
+    transform: translateY(-56rem);
+}
+.h2-contact{
+    font-size: 96px;
+    transform: translate(60rem);  
+}
+
+.contact-info{
+    background-color: #313B40;
+    font-size: 24px;
+    width: 577px;
+    height: auto;
+    padding: 10px;
+    margin: 20px;
 }
 
 .carousel-container {
@@ -467,6 +480,7 @@ section[role=hero] {
     display: flex;
     margin-top: 2rem;
     justify-content: space-between;
+    transform: translateY(10rem)
 }
 /*-------Footer-------*/
 #to-top {
@@ -698,6 +712,11 @@ footer hr {
         margin: 0 10px;
     }
 
+    .intro-richard{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 5%;  
+    }
 }
 
 @keyframes burger-checked {
