@@ -116,7 +116,7 @@ li {
 }
 
 section.full {
-
+    min-height: 20rem;
 }
 
 .justify-start {
