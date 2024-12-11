@@ -34,7 +34,9 @@ p {
     outline: none;
 }
 
-h2, h3 {
+h2:not(:has(> span)),
+h3:not(:has(> span)),
+span {
     background-image: var(--metal-grey);
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -135,6 +137,35 @@ section.full .text-wrapper {
     display: block;
 }
 
+section.slanted {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #000E16;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.slanted img {
+    width: 60%;
+    clip-path: polygon(0 100%, 0 0, 70% 0, 100% 100%, 0 100%);
+    object-fit: cover;
+}
+
+section.slanted .text-wrapper {
+    height: fit-content;
+    padding: 1rem;
+    max-width: 20rem;
+    margin: auto;
+}
+
+section.slanted .text-wrapper .button {
+    margin-top: 1rem;
+}
+
+section.slanted.img-left {
+
+}
+
 .justify-start {
     justify-content: flex-start;
 }
@@ -185,6 +216,7 @@ section.full .text-wrapper {
     color: white;
     font-family: 'Goldman';
     cursor: pointer;
+    width: fit-content;
     transition: all 200ms ease-out;
 }
 
@@ -418,6 +450,10 @@ section[role=hero] {
 #home main section:nth-of-type(1) {
     background-image: url("pics/cars/Nemesis_blk_corrug-1024x633.png");
 }
+
+/* #home main section:nth-of-type(2) {
+    background-image: url("pics/people/team-1.avif");
+} */
 
 /*--------------*/
 
