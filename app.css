@@ -271,6 +271,12 @@ section.full .text-wrapper {
     margin: 20px;
 }
 
+.customize-page{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .carousel-container {
     animation: calc(1s * 4) infinite ease-in-out carousel-transition;
     animation-delay: calc(.9s * 4);
@@ -710,12 +716,6 @@ footer hr {
 
     .connections li {
         margin: 0 10px;
-    }
-
-    .intro-richard{
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        column-gap: 5%;  
     }
 }
 
