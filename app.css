@@ -244,7 +244,10 @@ section.slanted.img-left {
 }
 
 .card-grid {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     grid-template-columns: repeat(4, 1fr);
     gap: 81px;
     max-width: 1300px;
@@ -273,28 +276,31 @@ section.slanted.img-left {
     height: 406px; 
 }
 
+.rich-img{
+    display: flex;
+    justify-content: flex-start;
+} 
+
 .intro-richard{
-    background-color: #313B40;
-    font-size: 24px;
-    width: 577px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 577px; 
     height: auto;
-    padding: 10px;
-    margin: 20px;
-    transform: translate(80rem);
+    padding: 20px;
 }
 
-.about-icon{
-    display: flex;
-    width: 763px;
-    height: 879px;
-    transform: translateY(-56rem);
-}
 .h2-contact{
-    font-size: 96px;
-    transform: translate(60rem);  
+    display: flex;
+    justify-content: center;
+    font-size: 96px;  
 }
 
 .contact-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     background-color: #313B40;
     font-size: 24px;
     width: 577px;
@@ -304,9 +310,39 @@ section.slanted.img-left {
 }
 
 .customize-page{
+    background-color: #000000;
+}
+
+.customize-img{
     display: flex;
-    flex-direction: row;
     justify-content: center;
+}
+
+.customize-h2{
+    display: flex;
+    justify-content: center;
+    font-size: xxx-large;
+}
+.customize-car-img{
+    display: flex;
+    justify-content: center;
+    transform: rotateY(180deg)
+
+}
+.x-icon{
+    display: flex;
+    padding: 50px;
+    background-image: url(pics/icons/x-icon.png);
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+}
+.customize-p{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 60px;
+    font-size: xx-large;
+    transform: translateY();
 }
 
 .carousel-container {
