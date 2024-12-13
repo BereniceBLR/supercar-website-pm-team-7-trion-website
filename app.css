@@ -316,33 +316,34 @@ section.slanted.img-left {
 .customize-img{
     display: flex;
     justify-content: center;
+    transform: translateY(-10rem);
 }
 
 .customize-h2{
     display: flex;
     justify-content: center;
-    font-size: xxx-large;
+    font-size: 100px;
+    transform: translateY(-10rem);
 }
 .customize-car-img{
     display: flex;
     justify-content: center;
-    transform: rotateY(180deg)
-
+    transform: rotateY(180deg);
 }
 .x-icon{
     display: flex;
-    padding: 50px;
     background-image: url(pics/icons/x-icon.png);
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     background-repeat: no-repeat;
+    background-position: center;
 }
 .customize-p{
     display: flex;
     justify-content: flex-end;
     padding-right: 60px;
     font-size: xx-large;
-    transform: translateY();
+    transform: translateY(-6rem);
 }
 
 .carousel-container {
