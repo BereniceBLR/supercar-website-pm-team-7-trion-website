@@ -253,6 +253,16 @@ section.slanted.img-left {
     max-width: 1300px;
     padding: 20px;
 }
+.card-grid-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 81px;
+    max-width: 5%;
+    margin: 50px auto;
+}
 .card-container {
     max-width: 5%;
     margin: 50px auto;
@@ -264,7 +274,22 @@ section.slanted.img-left {
     padding: 2rem;
 }
 
+.card-container-2{
+    display: flex;
+    justify-items: space-evenly;
+    align-items: flex-start;
+    margin: 25px auto;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 2rem;
+}
+
 .card {
+    background-color: #c4c4c4;
+    box-shadow: 0 0 10px;
+    font-size: 17px;
+}
+.card-2{
     background-color: #c4c4c4;
     box-shadow: 0 0 10px;
     font-size: 17px;
@@ -275,7 +300,6 @@ section.slanted.img-left {
     width: 304px;
     height: auto; 
 }
-
 .first-4{
     display: flex;
     flex-direction: row;
@@ -298,6 +322,11 @@ section.slanted.img-left {
     padding: 20px;
 }
 
+.layout-rich{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
 .h2-contact{
     display: flex;
     justify-content: center;
