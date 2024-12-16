@@ -1,6 +1,6 @@
 window.onload = function() {
 
-    let body = document.getElementsByName(body)[0];
+    let body = document.getElementsByTagName("body")[0];
 
     let dropdowns = document.querySelectorAll("button:has(~ ul.dropdown)");
 
@@ -8,8 +8,8 @@ window.onload = function() {
         elem.addEventListener("mouseleave", unfocus);
     })
 
-    if (body.id = "customize") {
-        let custom_exterior_buttons = document.querySelectorAll("product-nav input");
+    if (body.id == "customize") {
+        let custom_exterior_buttons = document.querySelectorAll(".color-select input");
         let car = document.getElementsByClassName("customization-exterior-car")[0];
     
         custom_exterior_buttons.forEach( function(elem) {
@@ -18,8 +18,13 @@ window.onload = function() {
 
         function checkExteriorButtons (event) {
             let button = event.target;
+            car.classList.forEach(function(classItem) {
+                if (classItem.includes("custom-color")) {
+                    car.classList.remove(classItem)
+                }
+            })
             if (button.checked) {
-                car.classList += button.value;
+                car.classList.add(button.value);
             }
         }
     }
