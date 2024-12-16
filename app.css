@@ -5,6 +5,7 @@
     --metal-red: linear-gradient(to right, #310202 0% 25%, #6A0F0F 50%, #310202 75% 100%);
     --metal-grey: linear-gradient(#000000, #FFFFFF, #000000);
     --focus-color: cornflowerblue;
+    --primary: #000E16
 }
 
 /*-------Elements-------*/
@@ -103,6 +104,7 @@ li {
     color: white;
 }
 
+
 /*---------------------*/
 
 /*-------Classes-------*/
@@ -121,10 +123,14 @@ li {
     width: 100%;
 }
 
-section.full {
-    min-height: 40rem;
+.text-wrapper {
+    overflow: visible;
+}
+
+section.full {  
+    height: 40rem;
     justify-content: end;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 section.full.img {
@@ -135,17 +141,21 @@ section.full .text-wrapper {
     height: fit-content;
     width: 50%;
     display: block;
+    z-index: 1;
 }
 
 section.slanted {
+    height: 35rem;
     display: flex;
     flex-flow: row nowrap;
-    background-color: #000E16;
+    background-color: var(--primary);
     justify-content: space-between;
     align-items: center;
+    border: solid 1rem var(--primary);
 }
 
 section.slanted img {
+    height: 100%;
     width: 60%;
     clip-path: polygon(0 100%, 0 0, 70% 0, 100% 100%, 0 100%);
     object-fit: cover;
@@ -154,7 +164,7 @@ section.slanted img {
 section.slanted .text-wrapper {
     height: fit-content;
     padding: 1rem;
-    max-width: 20rem;
+    max-width: 40%;
     margin: auto;
 }
 
@@ -162,8 +172,9 @@ section.slanted .text-wrapper .button {
     margin-top: 1rem;
 }
 
-section.slanted.img-left {
-
+/*TODO*/
+section.slanted.img-right img{
+    clip-path: polygon(0 100%, 0 0, 70% 0, 100% 100%, 0 100%);
 }
 
 .justify-start {
@@ -541,9 +552,9 @@ section[role=hero] {
     background-image: url("pics/cars/Nemesis_blk_corrug-1024x633.png");
 }
 
-/* #home main section:nth-of-type(2) {
-    background-image: url("pics/people/team-1.avif");
-} */
+#home main section:nth-of-type(3) {
+    background-image: url("pics/cars/trionnemesissupercars.jpg");
+}
 
 /*--------------*/
 
@@ -568,17 +579,41 @@ section[role=hero] {
     position: relative;
 }
      
+.shaded {
+    position: relative;
+}
 
-.shaded:before {
+.shaded::before {
     position: absolute;
     content: "";
-    left: 5%;
-    right: 5%;
+    left: 0;
+    right: 0;
     top: 50%;
     height: 0;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.608);
     z-index: -1;
     box-shadow: 0 0 40px 40px rgba(0, 0, 0, 0.608);
+}
+
+div.shaded::before {
+    top: 5%;
+    bottom: 5%;
+    height: auto;
+}
+
+.shadow-top-bottom {
+    position: relative;
+}
+
+.shadow-top-bottom::after {
+    position: absolute;
+    content: "";
+    box-shadow: inset 0 2rem 2rem -7px rgba(0,0,0,1), inset 0 -2rem 2rem -7px rgba(0,0,0,1);
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .hero article p {
@@ -723,6 +758,7 @@ footer hr {
     background-image: url("pics/cars/car-black-blue-bg.jpg");
 }
 
+
 /*-----------------*/
 
 /*-------Mobile/Tablet-------*/
@@ -823,6 +859,40 @@ footer hr {
         background-position: top;
         max-height: 1000px;
     }
+
+    section.full .text-wrapper,
+    section.slanted .text-wrapper {
+        width: 100%;
+        max-width: none;
+    }
+
+    section.slanted {
+        flex-direction: column;
+        min-height: 40rem;
+        height: auto;
+    }
+
+    section.slanted img,
+    section.slanted.img-right img {
+        width: 100%;
+        height: 100%;
+        order: 1;
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%, 100% 0);
+    }
+
+    #footer-main {
+        flex-flow: column nowrap;
+    }
+
+    #footer-contact {
+        display: none;
+    }
+
+    .footer-nav ul li {
+        text-align: center;
+        margin-bottom: 2em;
+    }
+
 
     .connections {
         max-width: 300px;
