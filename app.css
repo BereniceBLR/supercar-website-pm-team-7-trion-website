@@ -5,7 +5,17 @@
     --metal-red: linear-gradient(to right, #310202 0% 25%, #6A0F0F 50%, #310202 75% 100%);
     --metal-grey: linear-gradient(#000000, #FFFFFF, #000000);
     --focus-color: cornflowerblue;
-    --primary: #000E16
+    --primary: #000E16;
+    --custom-color-1: hsl(0, 0%, 0%);
+    --custom-color-2: hsl(0, 0%, 42%);
+    --custom-color-3: hsl(0, 0%, 100%);
+    --custom-color-4: hsl(234, 93%, 12%);
+    --custom-color-5: hsl(261, 93%, 12%);
+    --custom-color-6: hsl(22, 85%, 43%);
+    --custom-color-7: hsl(0, 93%, 12%);
+    --custom-color-8: hsl(56, 90%, 49%);
+    --custom-color-9: hsl(59, 94%, 14%);
+    --custom-color-10: hsl(129, 91%, 5%);
 }
 
 /*-------Elements-------*/
@@ -29,10 +39,6 @@ a, p, label, h1, h2, h3, h4 {
     font-family: 'Goldman';
     margin: 0;      
     color: white;
-}
-
-p {
-
 }
 
 :focus-visible {
@@ -359,6 +365,7 @@ section.slanted.img-right img{
     width: 577px;
     height: auto;
 }
+
 .contact-us-main {
     background-color: #000000;
     display: flex;
@@ -369,28 +376,49 @@ section.slanted.img-right img{
     height: 25rem;
 }
 
-.customize-page{
+.logo-title {
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+}
+
+.logo-title .img {
+    background-image: url(pics/icons/trion-logo.png);
+    height: 15rem;
+    display: block;
+    width: 15vw;
+}
+
+.logo-title h1 {
+    width: fit-content;
+    font-size: calc(1rem + 5vw);
+}
+
+
+#customize {
     background-color: #000000;
 }
 
-.customize-img{
+#customize header {
+    height: 20rem;
+    position: relative;
+}
+
+.customize-img {
     display: flex;
     justify-content: center;
     transform: translateY(-10rem);
 }
 
-.customize-h2{
-    display: flex;
-    justify-content: center;
-    font-size: 100px;
-    transform: translateY(-10rem);
-}
-.product{
+.product {
     display: flex;
     justify-content: center;
     transform: rotateY(180deg);
 }
-.container{
+
+.container {
     display: grid;
     place-items: center;
     height: 100vh; 
@@ -398,7 +426,8 @@ section.slanted.img-right img{
     padding: 0 2.5rem;
     background-color: hsl(0, 0%, 0%);
 }
-.product::after{
+
+.customization-exterior-car::after {
     content: "";
     position: absolute;
     top: 0; 
@@ -409,11 +438,13 @@ section.slanted.img-right img{
     /* opacity: 0.5; */
     mix-blend-mode: hue;                
 }
-.product-nav{
+
+.product-nav {
     position: relative;
     place-items: center;
 }
-.product-nav label{
+
+.product-nav label {
     display: inline-block;
     width: 5vmin; 
     height: 5vmin; 
@@ -423,61 +454,62 @@ section.slanted.img-right img{
                 0.5em 0.5em 1em -0.15em rgba(0, 0, 0, 0.25);
     transition: 200ms all ease-in-out;
 }
-.product-nav label + label{
+
+.product-nav label + label {
     margin-left: 2.5em; 
 }
 
-.product-nav label:nth-of-type(1), 
-#color-1:checked ~ .product::after{
-    background-color: hsl(0, 0%, 0%);
+.custom-color-1 {
+    background-color: var(--custom-color-1);
 }
-.product-nav label:nth-of-type(2), 
-#color-2:checked ~ .product::after{
-    background-color: hsl(0, 0%, 42%);
+
+.custom-color-2 {
+    background-color: var(--custom-color-2);
 }
-.product-nav label:nth-of-type(3),
-#color-3:checked ~ .product::after{
-    background-color: hsl(0, 0%, 100%);
+
+.product-nav label:nth-of-type(3) {
+    background-color:var(--custom-color-3);
 }
-.product-nav label:nth-of-type(4),
-#color-4:checked ~ .product::after{
-    background-color: hsl(234, 93%, 12%);
+
+.product-nav label:nth-of-type(4) {
+    background-color: var(--custom-color-4);
 }
-.product-nav label:nth-of-type(5),
-#color-5:checked ~ .product::after{
-    background-color: hsl(261, 93%, 12%);
+
+.product-nav label:nth-of-type(5) {
+    background-color: var(--custom-color-5);
 }
-.product-nav label:nth-of-type(6),
-#color-6:checked ~ .product::after{
-    background-color: hsl(22, 85%, 43%);
+
+.product-nav label:nth-of-type(6) {
+    background-color: var(--custom-color-6);
 }
-.product-nav label:nth-of-type(7),
-#color-7:checked ~ .product::after{
-    background-color: hsl(0, 93%, 12%);
+
+.product-nav label:nth-of-type(7) {
+    background-color: var(--custom-color-7);
 }
-.product-nav label:nth-of-type(8),
-#color-8:checked ~ .product::after{
-    background-color: hsl(56, 90%, 49%);
+
+.product-nav label:nth-of-type(8) {
+    background-color: var(--custom-color-8);
 }
-.product-nav label:nth-of-type(9),
-#color-9:checked ~ .product::after{
-    background-color: hsl(59, 94%, 14%);
+
+.product-nav label:nth-of-type(9) {
+    background-color: var(--custom-color-9);
 }
-.product-nav label:nth-of-type(10),
-#color-10:checked ~ .product::after{
-    background-color: hsl(129, 91%, 5%);
+
+.product-nav label:nth-of-type(10) {
+    background-color: var(--custom-color-10);
 }
+
 
 
 #color-1:checked ~ .product-nav > label:nth-of-type(1), 
 #color-2:checked ~ .product-nav > label:nth-of-type(2),
 #color-3:checked ~ .product-nav > label:nth-of-type(3),
-#color-4:checked ~ .product-nav > label:nth-of-type(4)
-#color-5:checked ~ .product-nav > label:nth-of-type(5)
-#color-6:checked ~ .product-nav > label:nth-of-type(6)
-#color-7:checked ~ .product-nav > label:nth-of-type(7)
-#color-8:checked ~ .product-nav > label:nth-of-type(8)
-#color-9:checked ~ .product-nav > label:nth-of-type(9)
+#color-4:checked ~ .product-nav > label:nth-of-type(4),
+#color-5:checked ~ .product-nav > label:nth-of-type(5),
+#color-6:checked ~ .product-nav > label:nth-of-type(6),
+#color-7:checked ~ .product-nav > label:nth-of-type(7),
+#color-8:checked ~ .product-nav > label:nth-of-type(8),
+#color-9:checked ~ .product-nav > label:nth-of-type(9),
 #color-10:checked ~ .product-nav > label:nth-of-type(10){
     transform: scale(1.3);
 }
@@ -563,7 +595,7 @@ div[class*=carousel_]:nth-of-type(3) {
 
 /*-------Header/Nav-------*/
 
-header {
+header:not(#customize header) {
     height: 5rem;
     width: 100%;
     position: absolute;
