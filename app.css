@@ -533,7 +533,6 @@ section.slanted.img-right img{
     
 }
 
-
 .carousel-container {
     animation: calc(1s * 4) infinite ease-in-out carousel-transition;
     animation-delay: calc(.9s * 4);
