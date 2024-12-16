@@ -25,8 +25,14 @@ window.onload = function() {
             })
             if (button.checked) {
                 car.classList.add(button.value);
+                localStorage.setItem("exterior_color", button.value);
             }
         }
+    }
+
+    if (body.id == "settings") {
+        let car = document.getElementsByClassName("customization-exterior-car")[0];
+        car.classList.add(localStorage.getItem("exterior_color"));
     }
     
     function unfocus(event) {
