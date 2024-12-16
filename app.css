@@ -385,8 +385,11 @@ section.slanted.img-left {
 .customize-p{
     display: flex;
     flex-direction: row;
-    justify-items: space-between;
-    align-items: center;
+    justify-content: flex-end;
+    transform: translateY(-6rem);
+    padding-right: 4rem;
+    font-size: xx-large;
+    
 }
 
 
