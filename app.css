@@ -411,6 +411,7 @@ section.slanted.img-right img{
 }
 .product-nav{
     position: relative;
+    place-items: center;
 }
 .product-nav label{
     display: inline-block;
