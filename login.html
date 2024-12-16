@@ -1,0 +1,86 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="app.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <header>
+            <nav class="row">
+                <a class="navlogo img" href="index.html" aria-label="company logo"></a>
+                <label for="burger-cb" id="menu-burger" class="img"></label>
+                <input type="checkbox" id="burger-cb" tabindex="1">
+                
+                <ul class="row" id="nav-list">
+                    <li>
+                        <button aria-haspopup="true" class="no-button">MODELS</button>
+                        <ul class="dropdown" aria-label="submenu">
+                            <li><a href="nemesis.html">NEMESIS</a></li>
+                            <li><a href="black-widow.html">BLACK WIDOW</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button aria-haspopup="true" class="no-button">ABOUT US</button>
+                        <ul class="dropdown" aria-label="submenu">
+                            <li><a href="our-story.html">OUR STORY</a></li>
+                            <li><a href="press.html">PRESS</a></li>
+                            <li><a href="contact-us.html">CONTACT US</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button aria-haspopup="true" class="no-button">CUSTOMIZE</button>
+                        <ul class="dropdown" aria-label="submenu">
+                            <li><a href="customize.html">NEMESIS</a></li>
+                            <li><a href="customize.html">BLACK WIDOW</a></li>
+                        </ul> 
+                    </li>
+                    <li><a href="shop.html"aria-haspopup="true">SHOP</a></li>
+                </ul>
+                <div class="row">
+                    <a class="navcart img" href="cart.html" title="cart"></a>
+                    <div class="cart-overlay hidden">
+                        
+                    </div>
+                    <a class="navaccount img" href="account.html" title="account"></a>
+                    <div class="login-overlay col hidden">
+                        <a href="login.html" class="button">REGISTER</a>
+                        <a href="login.html" class="button">LOGIN</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="h2-contact"><h2>TRION LOGIN</h2></div>
+            <div class="contact-us-main">
+                <section id="footer-contact">
+                    <form class="row wrap">
+                        <div>
+                            <label for="f-name">FIRST NAME</label>
+                            <input type="text" id="f-name" placeholder="FIRST NAME">
+                        </div>
+                        <div>
+                            <label for="l-name">LAST NAME</label>
+                            <input type="text" id="l-name" placeholder="LAST NAME">
+                        </div>
+                        <div>
+                            <label for="email">EMAIL*</label>
+                            <input type="text" id="email" placeholder="EMAIL" required>
+                        </div>
+                        <div>
+                            <label for="phone">PHONE</label>
+                            <input type="text" id="phone" placeholder="PHONE">
+                        </div>
+                        <div>
+                            <label for="message">MESSAGE*</label>
+                            <textarea id="message" placeholder="MESSAGE" required></textarea>
+                        </div>
+                        <button type="submit" class="button">SUBMIT</button>                  
+                    </form>
+                </section>
+        </div>
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>

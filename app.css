@@ -425,6 +425,7 @@ section.slanted.img-right img{
     width: 100vw; 
     padding: 0 2.5rem;
     background-color: hsl(0, 0%, 0%);
+    grid-gap: 2rem;
 }
 
 .customization-exterior-car::after {
@@ -563,7 +564,6 @@ section.slanted.img-right img{
     font-size: xx-large;
     
 }
-
 
 .carousel-container {
     animation: calc(1s * 4) infinite ease-in-out carousel-transition;
