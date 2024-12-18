@@ -185,8 +185,9 @@ section.slanted .text-wrapper .button {
 }
 
 /*TODO*/
-section.slanted.img-right img{
-    clip-path: polygon(0 100%, 0 0, 70% 0, 100% 100%, 0 100%);
+section.slanted.img-right img {
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%, 30% 0);
+    order: 1;
 }
 
 .justify-start {
