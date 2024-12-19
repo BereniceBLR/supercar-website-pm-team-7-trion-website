@@ -1033,8 +1033,13 @@ footer hr {
         top: -9999px
     }
 
+    header:has(#burger-cb:checked) ~ main section {
+        z-index: -1;
+    }
+
     #menu-burger:has(+ #burger-cb:checked) {
         position: fixed;
+        overflow: hidden;
         animation: 150ms burger-checked forwards ease-in-out;
     }
 
@@ -1081,10 +1086,17 @@ footer hr {
         max-height: 1000px;
     }
 
-    section.full .text-wrapper,
-    section.slanted .text-wrapper {
+    section.full .text-wrapper {
         width: 100%;
         max-width: none;
+    }
+
+    section.slanted .text-wrapper {
+        max-width: 95%;
+    }
+
+    section.full {
+        align-items: center;
     }
 
     section.slanted {
