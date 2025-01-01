@@ -1073,10 +1073,16 @@ footer hr {
         content: " >";
     }
 
+    header .dropdown {
+        display: block;
+        opacity: 0;
+        visibility: none;
+    }
+
     ul li:hover > ul,
     ul li:focus-within > ul,
     ul li ul:hover {
-        animation: dropdown-open-mobile 200ms ease-out forwards;
+        animation: dropdown-open-mobile 100ms ease-out forwards;
     }
     
     .hero {
@@ -1196,6 +1202,7 @@ footer hr {
 
 @keyframes dropdown-open-mobile {
     0% {
+        display: block;
         opacity: 0;
         transform: translateX(-15%);
     }
