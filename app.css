@@ -23,7 +23,7 @@
 * {
     box-sizing: border-box;
 }
-*, *::after, *::before{
+*::after, *::before{
     box-sizing: inherit;
     margin: 0; 
     padding: 0; 
@@ -114,6 +114,10 @@ li {
     list-style: none;
     text-decoration: none;
     color: white;
+}
+
+img {
+    max-width: 100%;
 }
 
 
@@ -393,13 +397,16 @@ section.slanted.img-right img {
     left: 50%;
     transform: translateX(-50%);
     align-items: center;
+    padding-top: 2rem;
+    height: 100%;
 }
 
 .logo-title .img {
     background-image: url(pics/icons/trion-logo.png);
-    height: 15rem;
+    height: 50%;
     display: block;
     width: 15vw;
+    min-height: 60px;
 }
 
 .logo-title h1 {
@@ -413,7 +420,7 @@ section.slanted.img-right img {
 }
 
 #customize header {
-    height: 20rem;
+    height: 35%;
     position: relative;
     justify-content: space-between;
     padding: 2rem;
@@ -453,15 +460,33 @@ section.slanted.img-right img {
     grid-gap: 2rem;
 }
 
-.customization-exterior-car {
+#customize .page-wrapper {
     position: relative;
-    margin: 10rem auto;
+    top: 0;
+    height: 100vh;
+    max-height: 100vh;
+}
+
+#customize main {
+    height: 65%;
+}
+
+#customize .customization-exterior-car {
+    position: relative;
+    margin: auto;
     display: flex;
     justify-content: center; 
+    height: 50%;
+    padding: 1rem;
 }
 
 #settings .customization-exterior-car {
     margin: 3rem 0;
+}
+
+.customization-exterior-car img {
+    object-fit: contain;
+    width: 70%
 }
 
 .customization-exterior-car::after {
@@ -476,22 +501,104 @@ section.slanted.img-right img {
     mix-blend-mode: color;                
 }
 
+.customization-nav {
+    padding: 1rem; 
+    height: 50%;
+    justify-content: space-between;
+}
+
+.customizor-type {
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    height: 19%;
+}
+
+.customizor-type h2 {
+    -webkit-text-fill-color: unset;
+    font-size: 2em;
+    font-weight: 100;
+}
+
+.button-left,
+.button-right {
+    width: 50px;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+}
+
+.button-left {
+    background-image: url(pics/icons/left-arrow.svg);
+}
+
+.button-right {
+    background-image: url(pics/icons/right-arrow.svg);
+}
+
+.customizor-nav-secondary {
+    height: 29%;
+    /* border: solid 1px white; */
+    justify-content: center;
+    align-items: center;
+}
+
+.customizor-nav-secondary .tab {
+    background: none;
+    color: white;
+    border: none;
+    font-family: "Goldman";
+    font-size: 2em;
+}
+
+.customizor-nav-secondary ul {
+    gap: 2rem;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: none;
+    max-width: 80%;
+}
+
 .color-select {
     display: flex;
     justify-content: center;
-    place-items: center;
+    height: 39%;
     gap: 2rem;
+}
+
+.color-select button {
+    height: 70%;
+}
+
+.color-select .content {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    height: 100%;
+    max-width: 80%;
+    overflow-x: auto;
+    scrollbar-width: none;
 }
 
 .color-select label {
     display: inline-block;
-    width: 5vmin; 
-    height: 5vmin; 
+    position: relative;
+    aspect-ratio: 1/1;
+    height: 70%; 
     background-color: hsl(30, 50%, 75%);
     cursor: pointer;
-    box-shadow: 0 0 0 0.5em #353434,
-                0.5em 0.5em 1em -0.15em rgba(0, 0, 0, 0.25);
     transition: 200ms all ease-in-out;
+    border: solid 1px rgb(104, 104, 104);
+}
+
+.color-select label:after {
+    content: '';
+    background-image: linear-gradient(#000000, transparent);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 .color-select label:has(+ input:focus-visible) {
@@ -505,7 +612,8 @@ section.slanted.img-right img {
 
 .color-select input {
     position: fixed;
-    text-indent: 9999px;
+    top: -9999px;
+    display: block;
 }
 
 

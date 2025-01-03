@@ -30,7 +30,7 @@ window.onload = function() {
         }
     }
 
-    if (body.id == "settings") {
+    if (body.id == "settings" || body.id == "customize") {
         let car = document.getElementsByClassName("customization-exterior-car")[0];
         car.classList.add(localStorage.getItem("exterior_color"));
     }
