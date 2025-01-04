@@ -471,13 +471,17 @@ section.slanted.img-right img {
     height: 65%;
 }
 
-#customize .customization-exterior-car {
+.customization-exterior-car {
     position: relative;
     margin: auto;
     display: flex;
-    justify-content: center; 
-    height: 50%;
+    justify-content: center;
     padding: 1rem;
+}
+
+#customize .customization-exterior-car {
+    height: 50%;
+    width: 70%
 }
 
 #settings .customization-exterior-car {
@@ -486,7 +490,6 @@ section.slanted.img-right img {
 
 .customization-exterior-car img {
     object-fit: contain;
-    width: 70%
 }
 
 .customization-exterior-car::after {
@@ -578,6 +581,7 @@ section.slanted.img-right img {
     max-width: 80%;
     overflow-x: auto;
     scrollbar-width: none;
+    padding: 0 4px;
 }
 
 .color-select label {
@@ -587,8 +591,12 @@ section.slanted.img-right img {
     height: 70%; 
     background-color: hsl(30, 50%, 75%);
     cursor: pointer;
-    transition: 200ms all ease-in-out;
+    transition: 100ms all ease-in-out;
     border: solid 1px rgb(104, 104, 104);
+}
+
+.color-select label.active {
+    border: solid 3px white;
 }
 
 .color-select label:after {
@@ -616,12 +624,10 @@ section.slanted.img-right img {
     display: block;
 }
 
-
 .custom-color-1::after,
 label[for=exterior-color-1] {
     background-color: var(--custom-color-1);
 }
-
 
 .custom-color-2::after,
 label[for=exterior-color-2] {
