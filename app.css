@@ -1157,18 +1157,18 @@ footer hr {
         animation: 150ms burger-checked forwards ease-in-out;
     }
 
-    #menu-burger:has(+ #burger-cb:not(:checked)) {
+    /* #menu-burger:has(+ #burger-cb:not(:checked)) {
         animation: 150ms burger-unchecked forwards ease-in-out;
-    }
+    } */
 
     #burger-cb:checked + #nav-list {
         display: flex;
         animation: 150ms menu-open forwards ease-in-out;
     }
 
-    #burger-cb:not(:checked) + #nav-list {
+    /* #burger-cb:not(:checked) + #nav-list {
         animation: 150ms menu-close forwards ease-in-out;
-    }
+    } */
 
     #nav-list > li {
         margin: 1rem 0;
