@@ -313,7 +313,7 @@ section.slanted.img-right img {
 .card-container-2{
     display: flex;
     justify-items: space-evenly;
-    align-items: ce;
+    align-items: center;
     margin: 25px auto;
     flex-wrap: wrap;
     gap: 25px;
