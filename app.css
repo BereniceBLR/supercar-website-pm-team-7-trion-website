@@ -406,7 +406,7 @@ section.slanted.img-right img {
     transform: translateX(-50%);
     align-items: center;
     padding-top: 2rem;
-    height: 100%;
+    height: fit-content;
 }
 
 .logo-title .img {
@@ -453,8 +453,10 @@ section.slanted.img-right img {
 
 .x-icon{
     background-image: url(pics/icons/x-icon.png);
-    width: 70px;
-    height: 70px;
+    width: 5%;
+    max-width: 70px;
+    min-width: 30px;
+    background-position: top;
     background-repeat: no-repeat;
 }
 
@@ -492,12 +494,35 @@ section.slanted.img-right img {
     width: 70%
 }
 
+.customization-exterior-car .wrapper {
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    height: min-content;
+    max-height: 100%
+}
+
+#customize .customization-exterior-car .wrapper::before {
+    content: "";
+    position: absolute;
+    right: -5%; 
+    left: -5%; 
+    bottom: 0; 
+    height: 30%;
+    background-image: radial-gradient(#01385B, transparent 80%);
+    transform: translateY(50%);
+    z-index: -1;
+}
+
 #settings .customization-exterior-car {
     margin: 3rem 0;
 }
 
 .customization-exterior-car img {
     object-fit: contain;
+    transform: scale(-1, 1);
+    max-height: 100%;
 }
 
 .customization-exterior-car::after {
@@ -575,6 +600,7 @@ section.slanted.img-right img {
     justify-content: center;
     height: 39%;
     gap: 2rem;
+    margin-block-end: 0;
 }
 
 .color-select button {
@@ -1104,6 +1130,21 @@ footer hr {
 
 /*-----------------*/
 
+@media screen and (max-height: 550px) {
+    #customize h2,
+    #customize button.tab {
+        font-size: 1.5em;
+    }
+
+    #customize h1 {
+        font-size: 2em;
+    }
+
+    .color-select label {
+        height: 100%;
+    }
+}
+
 /*-------Mobile/Tablet-------*/
 @media screen and (max-width: 768px) {
 
@@ -1267,7 +1308,18 @@ footer hr {
     .connections li {
         margin: 0 10px;
     }
+
+    #customize .customization-exterior-car {
+        width: 90%;
+    }
 }
+
+@media screen and (max-width: 425px) {
+    .save {
+        font-size: 1.5em;
+    }
+}
+
 
 @keyframes burger-checked {
     0% {opacity: 1;}

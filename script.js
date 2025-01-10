@@ -1,24 +1,72 @@
 window.onload = function() {
-
-    let body = document.getElementsByTagName("body")[0];
-
+    
+    const body = document.getElementsByTagName("body")[0];
     let dropdowns = document.querySelectorAll("button:has(~ ul.dropdown)");
-
+    
+    //Makes dropdowns unfocus when mouse leaves it
     dropdowns.forEach( function(elem) {
         elem.addEventListener("mouseleave", unfocus);
     })
-
+    
     function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
-
+    
     async function scroll(element, amount) {
         for (let i = 0; i < 20; i++) {
             element.scrollLeft += amount/20;
             await sleep(10);
         }
     }
+    
+    function unfocus(event) {
+        event.target.blur();
+    }
+    
+    //Scroll arrow code
+    if (document.querySelector(".scroll-arrow")) {
+        function populateArrows() {
+            const scroll_parents = document.querySelectorAll(":has(> .scroll-arrow)");
+            scroll_parents.forEach(function(scroll_parent) {
+        
+                const content = scroll_parent.querySelector(".content");
+                const arrow_left = scroll_parent.querySelector(".button-left");
+                const arrow_right = scroll_parent.querySelector(".button-right");
+                
+                    arrow_left.addEventListener("click", function(event) {
+                        scroll(content, -200);
+                    })
+                    arrow_right.addEventListener("click", function(event) {
+                        scroll(content, 200);
+                    })
+            })
+        }
 
+        function checkArrows() {
+            const scroll_parents = document.querySelectorAll(":has(> .scroll-arrow)");
+            
+            scroll_parents.forEach(function(scroll_parent) {
+                const content = scroll_parent.querySelector(".content");
+                const arrow_left = scroll_parent.querySelector(".button-left");
+                const arrow_right = scroll_parent.querySelector(".button-right");
+
+                if (content.scrollWidth > content.offsetWidth) {
+                    arrow_left.classList.remove("hidden");
+                    arrow_right.classList.remove("hidden");
+                } else {
+                    arrow_left.classList.add("hidden");
+                    arrow_right.classList.add("hidden");
+                }
+            })
+        }
+
+        window.onresize = checkArrows;
+
+        populateArrows();
+        checkArrows();
+    }
+
+    //Customise page
     if (body.id == "customize") {
         let custom_exterior_buttons = document.querySelectorAll(".color-select input");
         let custom_exterior_labels = document.querySelectorAll(".color-select label");
@@ -54,36 +102,10 @@ window.onload = function() {
         }
     }
 
+    //Settings page
     if (body.id == "settings") {
         let car = document.getElementsByClassName("customization-exterior-car")[0];
         car.classList.add(localStorage.getItem("exterior_color"));
     }
     
-    function unfocus(event) {
-        event.target.blur();
-    }
-
-    if (document.querySelector(".scroll-arrow")) {
-        const scroll_parents = document.querySelectorAll(":has(> .scroll-arrow)");
-        scroll_parents.forEach(function(scroll_parent) {
-
-            const content = scroll_parent.querySelector(".content");
-            if (content.scrollWidth > content.offsetWidth) {
-                const arrow_left = scroll_parent.querySelector(".button-left");
-                const arrow_right = scroll_parent.querySelector(".button-right");
-                arrow_left.classList.remove("hidden");
-                arrow_right.classList.remove("hidden");
-
-                arrow_left.addEventListener("click", function(event) {
-                    scroll(content, -200);
-                })
-                arrow_right.addEventListener("click", function(event) {
-                    scroll(content, 200);
-                })
-            }
-
-
-        })
-    }
-
 }
