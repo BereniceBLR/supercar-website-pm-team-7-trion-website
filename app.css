@@ -3,7 +3,7 @@
 
 :root {
     --metal-red: linear-gradient(to right, #310202 0% 25%, #6A0F0F 50%, #310202 75% 100%);
-    --metal-grey: linear-gradient(#000000, #FFFFFF, #000000);
+    --metal-grey: linear-gradient(#000000, #FFFFFF 40%, #FFFFFF 60%, #000000);
     --focus-color: cornflowerblue;
     --primary: #000E16;
     --custom-color-1: hsl(0, 0%, 0%);
@@ -124,6 +124,10 @@ img {
 /*---------------------*/
 
 /*-------Classes-------*/
+
+.mobile-only {
+    display: none;
+}
 
 .row {
     display: flex;
@@ -253,12 +257,16 @@ section.slanted.img-right img {
     font-family: 'Goldman';
     cursor: pointer;
     width: fit-content;
-    transition: all 200ms ease-out;
+    transition: background-position 200ms ease-out;
 }
 
 .button:hover,
 .button-visible {
     background-position: 80% 0;
+}
+
+.button:active {
+    filter: brightness(.8);
 }
 
 .img {
@@ -1087,7 +1095,7 @@ footer hr {
 /*-------Ids-------*/
 
 #home .hero:nth-of-type(1) {
-    background-image: url("pics/cars/car-orange-cloudy-2.png");
+    background-image: url("pics/cars/car-orange-cloudy.png");
 }
 #home .hero:nth-of-type(2) {
     background-image: url("pics/cars/black-ops1-1.png");
@@ -1098,6 +1106,10 @@ footer hr {
 
 /*-------Mobile/Tablet-------*/
 @media screen and (max-width: 768px) {
+
+    .mobile-only {
+        display: initial;
+    }
 
     header > nav a,
     header button.no-button {
@@ -1190,7 +1202,8 @@ footer hr {
     header .dropdown {
         display: block;
         opacity: 0;
-        visibility: none;
+        visibility: hidden;
+        pointer-events: none;
     }
 
     ul li:hover > ul,
@@ -1317,12 +1330,15 @@ footer hr {
 @keyframes dropdown-open-mobile {
     0% {
         display: block;
+        visibility: visible;
         opacity: 0;
         transform: translateX(-15%);
     }
     100% {
         opacity: 1;
         transform: translateX(0%);
+        visibility: visible;
+        pointer-events: fill;
     }
 }
 
@@ -1332,7 +1348,7 @@ footer hr {
 }
 
 @keyframes carousel-2 {
-    0%, 49.99%{
+    0%, 49.99% {
         order: 0;
         visibility: visible;
     }
