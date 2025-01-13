@@ -326,6 +326,8 @@ section.slanted.img-right img {
     flex-wrap: wrap;
     gap: 25px;
     padding: 2rem;
+    height: 600px;
+    width: 600px;
 }
 
 .card {
@@ -336,7 +338,7 @@ section.slanted.img-right img {
 .card-2{
     background-color: #c4c4c4;
     box-shadow: 0 0 10px;
-    font-size: 17px;
+    font-size: 25px;
 }
 
 .card img{
