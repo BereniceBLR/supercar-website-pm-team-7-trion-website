@@ -413,6 +413,22 @@ section.slanted.img-right img {
     max-width: 1080px;
 }
 
+.nemesis-orange{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nemesis-orange-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    max-width: 40%;
+}
+
 .logo-title {
     position: absolute;
     top: 0;
@@ -1021,8 +1037,9 @@ div.shaded::before {
 
 #hero-black{
     height: 90vh;
-    background-image: url("pics/cars/black-ops1-1.png");
+    background-image: url("pics/edit/black-logo.png");
     z-index: -1;  
+    
 }
 /*-------Footer-------*/
 #to-top {
