@@ -22,7 +22,14 @@ window.onload = function() {
     function unfocus(event) {
         event.target.blur();
     }
-    
+
+    const contact_submit_buttons = document.querySelectorAll(".contact-submit");
+    contact_submit_buttons.forEach( function(button) {
+        button.addEventListener("click", function () {
+            window.location.href = "./thanks.html";
+        });
+    })
+
     //Scroll arrow code
     if (document.querySelector(".scroll-arrow")) {
         function populateArrows() {
