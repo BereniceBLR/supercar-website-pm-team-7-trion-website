@@ -414,7 +414,6 @@ section.slanted.img-right img {
     max-width: 1080px;
 }
 
-<<<<<<< Updated upstream
 .nemesis-orange{
     display: flex;
     flex-direction: column;
@@ -428,12 +427,12 @@ section.slanted.img-right img {
     justify-content: center;
     align-items: flex-start;
     padding: 2rem;
-    max-width: 40%;
-=======
+    max-width: 750px;
+}
+
 #contact-us .contact-form {
     width: 80%;
     padding: 0;
->>>>>>> Stashed changes
 }
 
 .logo-title {
