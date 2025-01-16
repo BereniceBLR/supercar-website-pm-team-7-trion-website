@@ -1,0 +1,121 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="app.css">
+        <title>Cart | TRION</title>
+        <link rel="icon" type="image/x-icon" href="pics/icons/trion-logo.png">
+    </head>
+    <body>
+        <header>
+            <nav class="row">
+                <a class="navlogo img" href="index.html" aria-label="company logo"><h1>CART</h1></a>
+                <label for="burger-cb" id="menu-burger" class="img"></label>
+                <input type="checkbox" id="burger-cb" tabindex="0">
+                
+                <ul class="row" id="nav-list">
+                    <li class="mobile-only"><a href="index.html"aria-haspopup="true">HOME</a></li>
+                    <li>
+                        <button aria-haspopup="true" class="no-button">MODELS</button>
+                        <ul class="dropdown" aria-label="submenu">
+                            <li><a href="nemesis.html">NEMESIS</a></li>
+                            <li><a href="black-widow.html">BLACK WIDOW</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button aria-haspopup="true" class="no-button">ABOUT US</button>
+                        <ul class="dropdown" aria-label="submenu">
+                            <li><a href="our-story.html">OUR STORY</a></li>
+                            <li><a href="press.html">PRESS</a></li>
+                            <li><a href="contact-us.html">CONTACT US</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button aria-haspopup="true" class="no-button">CUSTOMIZE</button>
+                        <ul class="dropdown" aria-label="submenu">
+                            <li><a href="customize.html">NEMESIS</a></li>
+                            <li><a href="customize.html">BLACK WIDOW</a></li>
+                        </ul> 
+                    </li>
+                    <li><a href="shop.html"aria-haspopup="true">SHOP</a></li>
+                </ul>
+                <div class="row">
+                    <a class="navcart img" href="cart.html" title="cart"></a>
+                    <div class="cart-overlay hidden">
+                        
+                    </div>
+                    <a class="navaccount img" href="account.html" title="account"></a>
+                    <div class="login-overlay col hidden">
+                        <a href="login.html" class="button">REGISTER</a>
+                        <a href="login.html" class="button">LOGIN</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <br><br><br><br><br><br><br><br><br><br>
+        <p>WORK IN PROGRESS</p>
+        <br><br><br><br><br><br>
+        <footer>
+            <div>
+                <li><a id="to-top" href="#">BACK TO TOP</a></li>
+            </div>
+            <div id="footer-main" class="row wrap">
+                <nav class="footer-nav">
+                    <ul class="col">
+                        <li><a href="account.html">ACCOUNT</a></li>
+                        <li><a href="#">MODELS</a></li>
+                        <li><a href="customize.html">CUSTOMIZATION</a></li>
+                        <li><a href="#">ABOUT US</a></li>
+                        <li><a href="press.html">PRESS</a></li>
+                        <li><a href="contact-us.html">CONTACT US</a></li>
+                        <li><a href="shop.html">STORE</a></li>
+                    </ul>
+                </nav>
+                <section class="contact-form">
+                    <h3>CONTACT US</h3>
+                    <form class="row wrap">
+                        <div>
+                            <label for="f-name">FIRST NAME</label>
+                            <input type="text" id="f-name" placeholder="FIRST NAME">
+                        </div>
+                        <div>
+                            <label for="l-name">LAST NAME</label>
+                            <input type="text" id="l-name" placeholder="LAST NAME">
+                        </div>
+                        <div>
+                            <label for="email">EMAIL*</label>
+                            <input type="text" id="email" placeholder="EMAIL" required>
+                        </div>
+                        <div>
+                            <label for="phone">PHONE</label>
+                            <input type="text" id="phone" placeholder="PHONE">
+                        </div>
+                        <div>
+                            <label for="message">MESSAGE*</label>
+                            <textarea id="message" placeholder="MESSAGE" required></textarea>
+                        </div>
+                        <button type="submit" class="button contact-submit">SUBMIT</button>
+                    </form>
+                </section>
+            </div>
+            <ul class="row connections">
+                <li><a href=""><img src="pics/icons/facebook-icon.svg" alt="facebook"></a></li>
+                <li><a href=""><img src="pics/icons/instagram-icon.svg" alt="instagram"></a></li>
+                <li><a href=""><img src="pics/icons/linkedin-icon.svg" alt="linkedin"></a></li>
+                <li><a href=""><img src="pics/icons/youtube-icon.svg" alt="youtube"></a></li>
+                <li><a href=""><img src="pics/icons/tiktok-icon.svg" alt="tiktok"></a></li>
+                <li><a href=""><img src="pics/icons/x-icon.svg" alt="x"></a></li>
+                <li><a href=""><img src="pics/icons/twitch-icon.svg" alt="twitch"></a></li>
+            </ul>
+            <hr>
+                <div class="col" id="footer-foot">
+                    <ul class="row">
+                        <li><a href="">Privacy</a></li>
+                        <li><a href="">Terms</a></li>
+                    </ul>
+                    <p>© 2024-2025, Trion Supercars</p>
+                </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

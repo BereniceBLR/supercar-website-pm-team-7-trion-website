@@ -489,6 +489,8 @@ section.slanted.img-right img {
 
 .x-icon{
     background-image: url(pics/icons/x-icon.png);
+    aspect-ratio: 1 / 1;
+    height: fit-content;
     width: 5%;
     max-width: 70px;
     min-width: 30px;
