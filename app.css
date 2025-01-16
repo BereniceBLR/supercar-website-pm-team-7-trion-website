@@ -934,7 +934,8 @@ ul li ul:hover {
     height: 50px;
 }
 
-section[role=hero] {
+[role=hero] {
+    height: 70vh;
     overflow-x: hidden;
 }
 
@@ -946,12 +947,16 @@ section[role=hero] {
     background-image: url("pics/cars/trionnemesissupercars.jpg");
 }
 
+#home [role=hero] {
+    height: 100vh;
+}
+
 /*--------------*/
 
 
 .hero {
     display: flex;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     min-width: 100vw;
     justify-content: center;
@@ -961,6 +966,8 @@ section[role=hero] {
 
 .hero article {
     z-index: 1;
+    margin: 1rem;
+    text-align: center;
 }
 
 .hero article h2 {
@@ -1296,7 +1303,6 @@ footer hr {
     }
     
     .hero {
-        height: 100vh;
         background-size: cover;
         background-position: top;
         max-height: 1000px;

@@ -23,6 +23,7 @@ window.onload = function() {
         event.target.blur();
     }
 
+    //Contact form redirect
     const contact_forms = document.querySelectorAll(".contact-form form");
     contact_forms.forEach( function(form) {
         form.addEventListener("submit", function (event) {
