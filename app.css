@@ -1009,7 +1009,7 @@ div.shaded::before {
     content: "";
     box-shadow: inset 0 2rem 2rem -7px rgba(0,0,0,1), inset 0 -2rem 2rem -7px rgba(0,0,0,1);
     z-index: 2;
-    top: 0;
+    top: -1px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -1022,6 +1022,15 @@ div.shaded::before {
 .hero article a {
     font-size: calc(1rem + .5vw);
     margin-top: 2rem;
+}
+
+#hero-press,
+#hero-nemesis,
+#hero-our-story,
+#hero-black {
+    height: 90vh;
+    position: relative;
+    z-index: -1;
 }
 
 #hero-press {
@@ -1226,6 +1235,10 @@ footer hr {
         background-color: #021018;
         overflow-y: auto;
         animation: hidden 200ms ease-out forwards;
+    }
+
+    #nav-list > li:not(:has(li)) {
+        margin: 0 0 4rem;
     }
 
     #menu-burger {
