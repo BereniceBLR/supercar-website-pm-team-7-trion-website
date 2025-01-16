@@ -23,10 +23,11 @@ window.onload = function() {
         event.target.blur();
     }
 
-    const contact_submit_buttons = document.querySelectorAll(".contact-submit");
-    contact_submit_buttons.forEach( function(button) {
-        button.addEventListener("click", function () {
-            window.location.href = "./thanks.html";
+    const contact_forms = document.querySelectorAll(".contact-form form");
+    contact_forms.forEach( function(form) {
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            window.location.href = "thanks.html";
         });
     })
 

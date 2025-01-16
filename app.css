@@ -744,21 +744,6 @@ label[for=exterior-color-10] {
     background-color: var(--custom-color-10);
 }
 
-
-
-/* #color-1:checked ~ .color-select > label:nth-of-type(1), 
-#color-2:checked ~ .color-select > label:nth-of-type(2),
-#color-3:checked ~ .color-select > label:nth-of-type(3),
-#color-4:checked ~ .color-select > label:nth-of-type(4),
-#color-5:checked ~ .color-select > label:nth-of-type(5),
-#color-6:checked ~ .color-select > label:nth-of-type(6),
-#color-7:checked ~ .color-select > label:nth-of-type(7),
-#color-8:checked ~ .color-select > label:nth-of-type(8),
-#color-9:checked ~ .color-select > label:nth-of-type(9),
-#color-10:checked ~ .color-select > label:nth-of-type(10){
-    transform: scale(1.3);
-} */
-
 .carousel-container {
     animation: calc(1s * 4) infinite ease-in-out carousel-transition;
     animation-delay: calc(.9s * 4);
@@ -817,7 +802,8 @@ div[class*=carousel_]:nth-of-type(3) {
     overflow: auto;
 }
 
-.settings-nav .active {
+.settings-nav .active,
+header nav .active {
     color: #c90000;
 }
 
@@ -827,6 +813,21 @@ div[class*=carousel_]:nth-of-type(3) {
 
 .custom-car .buttons {
     justify-content: space-evenly;
+}
+
+.contact-info .text-wrapper {
+    gap: 1rem;
+    align-items: center;
+    height: 4em;
+    margin-bottom: 1rem;
+}
+
+.contact-info img {
+    width: 2rem;
+}
+
+.contact-info p {
+    color: rgb(200, 200, 200);
 }
   
 /*------------------------*/
@@ -1160,11 +1161,12 @@ footer hr {
 }
 
 #thanks main{
-    margin: 10rem 0rem 5rem;
+    margin: 50vh 0rem 50vh;
 }
 
 #thanks main p {
     text-align: center;
+    font-size: 2em;
 }
 
 /*-----------------*/
