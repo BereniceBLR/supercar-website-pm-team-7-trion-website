@@ -24,12 +24,12 @@ window.onload = function() {
     }
 
     //For presentation: reset car color on keypress
-    document.onkeydown = function(e) {
-        if (e.key == "`") {
-            localStorage.setItem("exterior_color", "exterior-color-1");
-            localStorage.setItem("exterior_button", "exterior-color-1");
-        }
-    }
+    // document.onkeydown = function(e) {
+    //     if (e.key == "`") {
+    //         localStorage.setItem("exterior_color", "exterior-color-1");
+    //         localStorage.setItem("exterior_button", "exterior-color-1");
+    //     }
+    // }
 
     //Contact form redirect
     const contact_forms = document.querySelectorAll(".contact-form form");
