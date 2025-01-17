@@ -153,7 +153,7 @@ img {
 }
 
 section.full {  
-    height: 40rem;
+    min-height: 40rem;
     justify-content: end;
     padding: 2rem;
 }
@@ -414,21 +414,11 @@ section.slanted.img-right img {
     max-width: 1080px;
 }
 
-.nemesis-orange{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.nemesis-orange {
+    background-image: url("pics/edit/trionorangesupercars3.png");
 }
 
-.nemesis-orange-text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 2rem;
-    max-width: 750px;
-}
+
 
 #contact-us .contact-form {
     width: 80%;
@@ -1000,6 +990,10 @@ div.shaded::before {
     height: auto;
 }
 
+section.slanted .text-wrapper p {
+    color: rgb(219, 219, 219);
+}
+
 .shadow-top-bottom {
     position: relative;
 }
@@ -1054,8 +1048,17 @@ div.shaded::before {
     height: 90vh;
     background-image: url("pics/edit/black-logo.png");
     z-index: -1;  
-    
 }
+
+.blackwidow {
+    background-image: url("pics/edit/blackwidow.png");
+}
+
+.redwidow {
+    background-image: url("pics/edit/red-widow.png");
+}
+
+
 /*-------Footer-------*/
 #to-top {
    display: flex;
