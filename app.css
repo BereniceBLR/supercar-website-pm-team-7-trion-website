@@ -821,6 +821,11 @@ header nav .active {
 .contact-info p {
     color: rgb(200, 200, 200);
 }
+
+.wip-msg{
+    margin: 50vh 0rem 50vh;
+    font-size: 3em;
+}
   
 /*------------------------*/
 
