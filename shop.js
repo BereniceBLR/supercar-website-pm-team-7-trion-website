@@ -56,8 +56,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         if (nav_2_ul.scrollHeight <= nav_2_ul.offsetHeight) {
-            nav_2_ul.style.borderLeftColor = "transparent";
-            nav_2_ul.style.borderRightColor = "transparent";
+            nav_2_ul.style.borderTopColor = "transparent";
+            nav_2_ul.style.borderBottomColor = "transparent";
         } else {
             nav_2_ul.style.borderTopColor = "white";
             nav_2_ul.style.borderBottomColor = "white";
