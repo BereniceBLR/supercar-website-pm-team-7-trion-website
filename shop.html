@@ -55,18 +55,26 @@
         </header>
         <main>
            <section class="shop-container">
-            <ul class="shop-nav-1">
-                <li><button type="button" class="tab no-button">All</button></li>
-                <li><button type="button" class="tab no-button">Male</button></li>
-                <li><button type="button" class="tab no-button">Female</button></li>
-                <li><button type="button" class="tab no-button">Lifestyle</button></li>
-            </ul>
-            <ul class="shop-nav-2">
-                <li><button type="button" class="tab no-button">All</button></li>
-                <li><button type="button" class="tab no-button">Jackets</button></li>
-                <li><button type="button" class="tab no-button">Casual</button></li>
-                <li><button type="button" class="tab no-button">Hats</button></li>
-            </ul>
+               <nav class="shop-nav-1 row">
+                <button type="button" class="img button-left scroll-arrow hidden"></button>
+                <ul class="content row">
+                    <li class="tab"><button type="button" class="no-button">All</button></li>
+                    <li class="tab"><button type="button" class="no-button">Male</button></li>
+                    <li class="tab"><button type="button" class="no-button">Female</button></li>
+                    <li class="tab"><button type="button" class="no-button">Lifestyle</button></li>
+                </ul>
+                <button type="button" class="img button-right scroll-arrow hidden"></button>
+            </nav>
+            <nav class="shop-nav-2 row">
+                <button type="button" class="img button-up scroll-arrow hidden"></button>
+                <ul class="content row">
+                    <li class="tab"><button type="button" class="no-button">All</button></li>
+                    <li class="tab"><button type="button" class="no-button">Jackets</button></li>
+                    <li class="tab"><button type="button" class="no-button">Casual</button></li>
+                    <li class="tab"><button type="button" class="no-button">Hats</button></li>
+                </ul>
+                <button type="button" class="img button-down scroll-arrow hidden"></button>
+            </nav>
             <div class="shop-content">
 
             </div>
@@ -134,5 +142,6 @@
                 </div>
         </footer>
         <script src="script.js"></script>
+        <script src="shop.js"></script>
     </body>
 </html>

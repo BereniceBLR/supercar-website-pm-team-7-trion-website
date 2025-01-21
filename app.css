@@ -591,6 +591,16 @@ section.slanted.img-right img {
 .button-right {
     width: 50px;
     height: 70%;
+    min-height: 10px;
+    background-color: transparent;
+    border: none;
+}
+
+.button-up,
+.button-down {
+    width: 70%;
+    height: 50px;
+    min-width: 10px;
     background-color: transparent;
     border: none;
 }
@@ -601,6 +611,14 @@ section.slanted.img-right img {
 
 .button-right {
     background-image: url(pics/icons/right-arrow.svg);
+}
+
+.button-up {
+    background-image: url(pics/icons/up-arrow.svg);
+}
+
+.button-down {
+    background-image: url(pics/icons/down-arrow.svg);
 }
 
 .customizor-nav-secondary {
@@ -843,8 +861,9 @@ header nav .active {
 }
 
 .wip-msg{
-    margin: 50vh 0rem 50vh;
+    margin: 50vh 0 50vh;
     font-size: 3em;
+    text-align: center;
 }
   
 /*------------------------*/
@@ -1216,40 +1235,128 @@ footer hr {
 }
 
 #shop main {
-    margin: 10rem 0;
+    margin: 15rem 0 10rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+
+/*-----------------*/
+
+/*-------Shop-------*/
 .shop-container {
     width: 70%;
-    min-height: 50vh;
+    height: 70vh;
+    min-height: 20rem;
     border: solid 1px white;
     border-radius: 5px;
     position: relative;
+    margin-right: 1rem;
 }
 
 .shop-container .tab {
     border: solid 1px white;
     border-radius: 5px 5px 0 0;
-    padding: 1rem
+    padding: 1rem;
+    flex-grow: 1;
+    background-color: #000000;
+    text-align: center;
+    transition: all .5s cubic-bezier(.47,1.64,.41,.8);
+    cursor: pointer;
+}
+
+[class^=shop-nav] {
+    flex-wrap: nowrap;
+}
+
+[class^=shop-nav] .content {
+    gap: 1rem;
+
 }
 
 .shop-nav-1 {
-    display: flex;
-    flex-direction: row;
+    width: 100%;
+    height: auto;
     position: absolute;
     top: 0;
     transform: translateY(-100%);
+    justify-content: center;
+    align-items: center;
+}
+
+.shop-nav-1 .tab:first-of-type {
+    margin-left: 1rem;
+}
+
+.shop-nav-1 .tab:last-of-type {
+    margin-right: 1rem;
+}
+
+.shop-nav-1 .tab.active {
+    transform: translateY(1rem);
+    border-color: red;
+}
+
+.shop-nav-2 .tab.active {
+    transform: translateX(1rem);
+    border-color: red;
+}
+
+.shop-nav-1 .content {
+    height: 100%;
+    width: 90%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-left: solid 1px rgba(255, 255, 255, 1);
+    border-right: solid 1px rgba(255, 255, 255, 1);
+    /* border-radius: 5px 5px 0 0; */
+    scrollbar-width: none;
+    align-items: flex-end;
 }
 
 .shop-nav-2 {
-    display: flex;
+    height: 100%;
+    width: auto;
     flex-direction: row;
     position: absolute;
+    transform: translateX(-100%);
     top: 0;
-    
+    writing-mode: vertical-lr;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop-nav-2  .content {
+    height: 90%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    border-top: solid 1px rgba(255, 255, 255, 1);
+    border-bottom: solid 1px rgba(255, 255, 255, 1);
+    border-radius: 5px 0 0 5px;
+}
+
+.shop-nav-2 .tab {
+    border-radius: 5px 0 0 5px;
+    margin-top: -1px;
+    margin-bottom: -1px
+}
+
+.shop-nav-2 .tab:first-of-type {
+    margin-top: 1rem;
+}
+
+.shop-nav-2 .tab:last-of-type {
+    margin-bottom: 1rem;
+}
+
+.shop-nav-2 .tab button {
+    transform:  scale(-1);
 }
 
 .shop-container .shop-content {
@@ -1257,7 +1364,19 @@ footer hr {
     width: 100%;
 }
 
-/*-----------------*/
+.shop-container .button-right,
+.shop-container .button-left {
+    height: 1.5rem;
+}
+
+.shop-container .button-up,
+.shop-container .button-down {
+    width: 1.5rem;
+}
+
+
+
+/*------------------*/
 
 @media screen and (max-height: 550px) {
     #customize h2,

@@ -1,4 +1,4 @@
-window.onload = function() {
+document.addEventListener("DOMContentLoaded", function() {
     
     const body = document.getElementsByTagName("body")[0];
     let dropdowns = document.querySelectorAll("button:has(~ ul.dropdown)");
@@ -12,15 +12,34 @@ window.onload = function() {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
     
-    async function scroll(element, amount) {
+    async function scrollH(element, amount) {
         for (let i = 0; i < 20; i++) {
             element.scrollLeft += amount/20;
             await sleep(10);
         }
     }
     
+    async function scrollV(element, amount) {
+        for (let i = 0; i < 20; i++) {
+            element.scrollTop += amount/20;
+            await sleep(10);
+        }
+    }
+
     function unfocus(event) {
         event.target.blur();
+    }
+
+    function absMin(...args) {
+        let newArgs = []
+        for (let i = 0; i < args.length; i++) {
+            newArgs.push(Math.abs(args[i]));
+        }
+        let min = Math.min(...newArgs);
+
+        for (let arg of args) {
+            if (Math.abs(arg) === min) return arg;
+        }
     }
 
     //For presentation: reset car color on keypress
@@ -49,12 +68,21 @@ window.onload = function() {
                 const content = scroll_parent.querySelector(".content");
                 const arrow_left = scroll_parent.querySelector(".button-left");
                 const arrow_right = scroll_parent.querySelector(".button-right");
+                const arrow_up = scroll_parent.querySelector(".button-up");
+                const arrow_down = scroll_parent.querySelector(".button-down");
                 
-                    arrow_left.addEventListener("click", function(event) {
-                        scroll(content, -200);
+                
+                    if (arrow_left) arrow_left.addEventListener("click", function(event) {
+                        scrollH(content, absMin(-200, -content.offsetWidth * .8));
                     })
-                    arrow_right.addEventListener("click", function(event) {
-                        scroll(content, 200);
+                    if (arrow_right) arrow_right.addEventListener("click", function(event) {
+                        scrollH(content, absMin(200, content.offsetWidth * .8));
+                    })
+                    if (arrow_up) arrow_up.addEventListener("click", function(event) {
+                        scrollV(content, absMin(-200, -content.offsetHeight * .8));
+                    })
+                    if (arrow_down) arrow_down.addEventListener("click", function(event) {
+                        scrollV(content, absMin(200, content.offsetHeight * .8));
                     })
             })
         }
@@ -66,18 +94,30 @@ window.onload = function() {
                 const content = scroll_parent.querySelector(".content");
                 const arrow_left = scroll_parent.querySelector(".button-left");
                 const arrow_right = scroll_parent.querySelector(".button-right");
+                const arrow_up = scroll_parent.querySelector(".button-up");
+                const arrow_down = scroll_parent.querySelector(".button-down");
 
-                if (content.scrollWidth > content.offsetWidth) {
-                    arrow_left.classList.remove("hidden");
-                    arrow_right.classList.remove("hidden");
-                } else {
-                    arrow_left.classList.add("hidden");
-                    arrow_right.classList.add("hidden");
-                }
+                if (arrow_left)
+                    if (content.scrollWidth > content.offsetWidth) {
+                        arrow_left.classList.remove("hidden");
+                        arrow_right.classList.remove("hidden");
+                    } else {
+                        arrow_left.classList.add("hidden");
+                        arrow_right.classList.add("hidden");
+                    }
+
+                if (arrow_up)
+                    if (content.scrollHeight > content.offsetHeight) {
+                        arrow_up.classList.remove("hidden");
+                        arrow_down.classList.remove("hidden");
+                    } else {
+                        arrow_up.classList.add("hidden");
+                        arrow_down.classList.add("hidden");
+                    }
             })
         }
 
-        window.onresize = checkArrows;
+        window.addEventListener("resize", checkArrows);
 
         populateArrows();
         checkArrows();
@@ -125,4 +165,4 @@ window.onload = function() {
         car.classList.add(localStorage.getItem("exterior_color"));
     }
     
-}
+})
