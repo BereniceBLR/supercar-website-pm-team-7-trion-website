@@ -247,6 +247,10 @@ section.slanted.img-right img {
     overflow: hidden;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .no-button {
     color: white;
     background: none;
@@ -750,15 +754,15 @@ label[for=exterior-color-10] {
     animation: calc(2s * 4) infinite ease-in-out carousel-2;
 }
 
-div[class*=carousel_] {
+.carousel-container [class*=carousel_] {
     position: relative;
 }
 
-div[class*=carousel_]:nth-of-type(2) {
+.carousel-container [class*=carousel_]:nth-of-type(2) {
     animation-delay: calc(1s * 4);
 }
 
-div[class*=carousel_]:nth-of-type(3) {
+.carousel-container [class*=carousel_]:nth-of-type(3) {
     animation-delay: calc(2s * 4);
 }
 
@@ -776,6 +780,14 @@ div[class*=carousel_]:nth-of-type(3) {
     padding: 1rem;
     height: 80vh;
     overflow: auto;
+}
+
+.settings-content h2 {
+    font-size: 3em;
+}
+
+.settings-content h3 {
+    font-size: 2em;
 }
 
 .settings-nav {
@@ -801,6 +813,14 @@ header nav .active {
 
 .settings-content {    
     flex-grow: 1
+}
+
+#garage article {
+    border: solid 1px grey;
+    border-left: transparent;
+    border-right: transparent;
+    padding: 1rem 0;
+    margin: 1rem 0;
 }
 
 .custom-car .buttons {
@@ -931,7 +951,7 @@ ul li ul:hover {
     height: 50px;
 }
 
-[role=hero] {
+.carousel-container {
     height: 70vh;
     overflow-x: hidden;
 }
@@ -944,7 +964,7 @@ ul li ul:hover {
     background-image: url("pics/cars/trionnemesissupercars.jpg");
 }
 
-#home [role=hero] {
+#home .carousel-container:has(.hero) {
     height: 100vh;
 }
 
@@ -1427,12 +1447,12 @@ footer hr {
     #garage {
         height: 80vh;
         max-height: 300px;
-        padding-top: 2rem;
+        padding-top: 1rem;
         margin: 0;
     }
 
     #garage .customization-exterior-car {
-        margin: 1rem 0;
+        margin: 0 0 1rem;
         padding: 2px;
     }
 
