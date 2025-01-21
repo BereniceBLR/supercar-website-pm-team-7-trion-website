@@ -48,15 +48,19 @@ document.addEventListener("DOMContentLoaded", function() {
     //controls whether the borders around the tab lists are shown
     function checkTabBorders() {
         if (nav_1_ul.scrollWidth <= nav_1_ul.offsetWidth) {
-            nav_1_ul.style.border = "none";
+            nav_1_ul.style.borderLeftColor = "transparent";
+            nav_1_ul.style.borderRightColor = "transparent";
         } else {
-            nav_1_ul.style.border = "";
+            nav_1_ul.style.borderLeftColor = "white";
+            nav_1_ul.style.borderRightColor = "white";
         }
 
         if (nav_2_ul.scrollHeight <= nav_2_ul.offsetHeight) {
-            nav_2_ul.style.border = "none";
+            nav_2_ul.style.borderLeftColor = "transparent";
+            nav_2_ul.style.borderRightColor = "transparent";
         } else {
-            nav_2_ul.style.border = "";
+            nav_2_ul.style.borderTopColor = "white";
+            nav_2_ul.style.borderBottomColor = "white";
         }
     }
 
