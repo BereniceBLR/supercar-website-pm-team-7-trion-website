@@ -1215,6 +1215,48 @@ footer hr {
     font-size: 2em;
 }
 
+#shop main {
+    margin: 10rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop-container {
+    width: 70%;
+    min-height: 50vh;
+    border: solid 1px white;
+    border-radius: 5px;
+    position: relative;
+}
+
+.shop-container .tab {
+    border: solid 1px white;
+    border-radius: 5px 5px 0 0;
+    padding: 1rem
+}
+
+.shop-nav-1 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    transform: translateY(-100%);
+}
+
+.shop-nav-2 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    
+}
+
+.shop-container .shop-content {
+    height: 100%;
+    width: 100%;
+}
+
 /*-----------------*/
 
 @media screen and (max-height: 550px) {
