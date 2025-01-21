@@ -1235,7 +1235,7 @@ footer hr {
 }
 
 #shop main {
-    margin: 15rem 0 10rem;
+    margin: 15rem 0 30vh;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -1265,7 +1265,7 @@ footer hr {
     flex-grow: 1;
     background-color: #000000;
     text-align: center;
-    transition: all .5s cubic-bezier(.47,1.64,.41,.8);
+    transition: all .2s ease;
     cursor: pointer;
 }
 
@@ -1299,6 +1299,10 @@ footer hr {
 .shop-nav-1 .tab.active {
     transform: translateY(1rem);
     border-color: red;
+}
+
+.shop-nav-2 .tab.deleting {
+    transform: translateX(100%);
 }
 
 .shop-nav-2 .tab.active {
@@ -1344,7 +1348,15 @@ footer hr {
 .shop-nav-2 .tab {
     border-radius: 5px 0 0 5px;
     margin-top: -1px;
-    margin-bottom: -1px
+    margin-bottom: -1px;
+}
+
+.shop-nav-2 .tab.creating:not(.active) {
+    animation: nav-2-create-tab 200ms ease-out;
+}
+
+.shop-nav-2 .tab.active.creating {
+    animation: nav-2-create-tab-active 200ms ease-out;
 }
 
 .shop-nav-2 .tab:first-of-type {
@@ -1764,4 +1776,14 @@ footer hr {
     20%, 100% {
         filter: none;
     }
+}
+
+@keyframes nav-2-create-tab {
+    from {transform: translateX(100%);}
+    to {transform: translateX(0);}
+}
+
+@keyframes nav-2-create-tab-active {
+    from {transform: translateX(100%);}
+    to {transform: translateX(1rem);}
 }
